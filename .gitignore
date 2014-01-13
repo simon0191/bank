@@ -46,6 +46,7 @@ Desktop.ini
 *.pydevproject
 .project
 .metadata
+.springBeans
 bin/**
 tmp/**
 tmp/**/*
