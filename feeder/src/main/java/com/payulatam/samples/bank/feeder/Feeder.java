@@ -1,19 +1,19 @@
 package com.payulatam.samples.bank.feeder;
 
-import com.payulatam.samples.bank.common.Data;
-
-import org.openspaces.core.GigaSpace;
-import org.openspaces.core.SpaceInterruptedException;
-import org.openspaces.core.context.GigaSpaceContext;
-
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
+
+import org.openspaces.core.GigaSpace;
+import org.openspaces.core.SpaceInterruptedException;
+import org.openspaces.core.context.GigaSpaceContext;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+import com.payulatam.samples.bank.common.Client;
+import com.payulatam.samples.bank.common.Data;
 
 /**
  * A feeder bean starts a scheduled task that writes a new Data objects to the space
@@ -83,8 +83,16 @@ public class Feeder implements InitializingBean, DisposableBean {
             try {
                 long time = System.currentTimeMillis();
                 Data data = new Data((counter++ % numberOfTypes), "FEEDER " + Long.toString(time));
+                Client client = new Client();
+                client.setName("Simon");
+                
                 gigaSpace.write(data);
+                gigaSpace.write(client);
+                
+                
                 log.info("--- FEEDER WROTE " + data);
+                log.info("--- NEW Client " + client);
+                
             } catch (SpaceInterruptedException e) {
                 // ignore, we are being shutdown
             } catch (Exception e) {
