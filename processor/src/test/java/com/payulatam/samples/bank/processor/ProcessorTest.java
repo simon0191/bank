@@ -1,8 +1,10 @@
 package com.payulatam.samples.bank.processor;
 
+import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Data;
 
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
 
@@ -15,11 +17,10 @@ public class ProcessorTest {
     @Test
     public void verifyProcessedFlag() {
         Processor processor = new Processor();
-        Data data = new Data(1, "test");
-
-        Data result = processor.processData(data);
-        assertEquals("verify that the data object was processed", true, result.isProcessed());
-        assertEquals("verify the data was processed", "PROCESSED : " + data.getRawData(), result.getData());
-        assertEquals("verify the type was not changed", data.getType(), result.getType());
+        Client client= new Client();
+        client.setName("Simon");
+        Client result = processor.processData(client);
+        assertEquals("verify that the data object was processed", "Santiago", result.getName());
+        assertEquals("verify the ID was not changed", client.getId(), result.getId());
     }
 }
