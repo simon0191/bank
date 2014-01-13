@@ -99,8 +99,8 @@
     <os-events:polling-container id="dataProcessorPollingEventContainer" giga-space="gigaSpace">
         <os-events:tx-support tx-manager="transactionManager"/>
         <os-core:template>
-            <bean class="com.payulatam.samples.bank.common.Data">
-                <property name="processed" value="false"/>
+            <bean class="com.payulatam.samples.bank.common.Client">
+                <property name="name" value="Simon"/>
             </bean>
         </os-core:template>
         <os-events:listener>

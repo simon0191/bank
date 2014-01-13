@@ -1,10 +1,10 @@
 package com.payulatam.samples.bank.processor;
 
-import com.payulatam.samples.bank.common.Data;
+import java.util.logging.Logger;
 
 import org.openspaces.events.adapter.SpaceDataEvent;
 
-import java.util.logging.Logger;
+import com.payulatam.samples.bank.common.Client;
 
 /**
  * The processor simulates work done no un-processed Data object. The processData
@@ -31,17 +31,16 @@ public class Processor {
      * occurs.
      */
     @SpaceDataEvent
-    public Data processData(Data data) {
+    public Client processData(Client client) {
         // sleep to simulate some work
         try {
             Thread.sleep(workDuration);
         } catch (InterruptedException e) {
             // do nothing
         }
-        data.setProcessed(true);
-        data.setData("PROCESSED : " + data.getRawData());
-        log.info(" ------ PROCESSED : " + data);
-        return data;
+        client.setName("Santiago");
+        log.info(" ------ PROCESSED : " + client);
+        return client;
     }
 
 }
