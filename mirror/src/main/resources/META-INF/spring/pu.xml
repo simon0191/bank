@@ -46,6 +46,13 @@
         <property name="annotatedClasses">
             <list>
                 <value>com.payulatam.samples.bank.common.Data</value>
+                
+                <value>com.payulatam.samples.bank.common.Transaction</value>
+                <value>com.payulatam.samples.bank.common.Account</value>
+                <value>com.payulatam.samples.bank.common.Client</value>
+                
+
+                
             </list>
         </property>
         <property name="hibernateProperties">
