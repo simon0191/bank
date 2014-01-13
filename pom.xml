@@ -48,6 +48,24 @@
             <version>${springVersion}</version>
             <scope>test</scope>
         </dependency>
+        
+        <!-- Spring MVC dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${springVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${springVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${springVersion}</version>
+        </dependency>
+        
     </dependencies>
     <build>
         <defaultGoal>package</defaultGoal>
