@@ -28,7 +28,7 @@
 		<module>mirror</module>
 		<module>processor</module>
 		<module>feeder</module>
-		<module>rest-api</module>
+		<!-- <module>rest-api</module> -->
 	</modules>
 	<dependencies>
 		<dependency>

@@ -10,10 +10,20 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
+	<context-param>
+		<param-name>applicationContextConfig</param-name>
+		<param-value>
+			/WEB-INF/applicationContext.xml
+			/WEB-INF/springDispatcher-servlet.xml
+		</param-value>
+	</context-param>
+
+
 	<servlet-mapping>
 		<servlet-name>springDispatcher</servlet-name>
 		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
+
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
