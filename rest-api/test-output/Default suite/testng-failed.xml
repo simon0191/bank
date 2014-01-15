@@ -5,17 +5,13 @@
     <classes>
       <class name="com.payulatam.samples.bank.test.ClientDaoTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="createValidateNameWithSpaces"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
-          <include name="beforeSuite"/>
-          <include name="beforeTest"/>
           <include name="beforeClass"/>
-          <include name="createValidateNameWithOutSpaces"/>
+          <include name="updateNotExistingClient"/>
         </methods>
       </class> <!-- com.payulatam.samples.bank.test.ClientDaoTest -->
     </classes>

@@ -40,11 +40,7 @@ public class Client {
 		return telephone;
 	}
 	
-	@Override
-	public String toString() {
-		return "Client [id=" + id + ", name=" + name + "]";
-	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -59,6 +55,24 @@ public class Client {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	@Override
+	public String toString() {
+		return "Client [id=" + id + ", name=" + name + ", address=" + address + ", telephone="
+				+ telephone + "]";
+	}
+	
+	@Override
+	public boolean equals(Object that) {
+		if(this == that) {
+			return true;
+		}
+		if(!this.getClass().equals(that.getClass())) {
+			return false;
+		}
+		Client client = (Client)that;
+		return this.name.equals(client.name) && this.telephone.equals(client.telephone) && this.address.equals(client.address);
 	}
 	
 	
