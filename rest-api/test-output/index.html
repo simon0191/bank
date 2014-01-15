@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Services">
-              <span class="suite-name border-passed">Services</span>
+              <span class="suite-name border-failed">Services</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Services">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">4 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods,   19 passed</span>
+                    <span class="method-stats">30 methods, 1 failed,   29 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Services" class="hide-methods failed suite-Services"> (hide)</a> <!-- hide-methods failed suite-Services -->
+                      <a href="#" panel-name="suite-Services" class="show-methods failed suite-Services"> (show)</a> <!-- show-methods failed suite-Services -->
+                    </span>
+                    <div class="method-list-content failed suite-Services">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByClientId">searchByClientId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Services -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,6 +116,31 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.AccountDaoTest" hash-for-method="createAccountInvalidClientId">createAccountInvalidClientId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="createCreditTransaction">createCreditTransaction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="createDebitTransaction">createDebitTransaction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="createInvalidCreditTransaction">createInvalidCreditTransaction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="createInvalidNegativeValueTransaction">createInvalidNegativeValueTransaction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="createInvalidNullTypeTransaction">createInvalidNullTypeTransaction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -166,12 +205,37 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByAccountId">searchByAccountId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.ClientDaoTest" hash-for-method="searchById">searchById</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByNonExistentAccountId">searchByNonExistentAccountId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByNonExistentCientId">searchByNonExistentCientId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.ClientDaoTest" hash-for-method="searchByNonExistentId">searchByNonExistentId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByNonExistentNumber">searchByNonExistentNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Services" title="com.payulatam.samples.bank.test.service.TransactionDaoTest" hash-for-method="searchByNumber">searchByNumber</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -206,70 +270,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Services" class="panel Services">
-          <div class="suite-Services-class-passed">
+          <div class="suite-Services-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.payulatam.samples.bank.test.service.AccountDaoTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.payulatam.samples.bank.test.service.TransactionDaoTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createAccountInvalidClientId">
-                  </a> <!-- createAccountInvalidClientId -->
-                  <span class="method-name">createAccountInvalidClientId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="createValidAccount">
-                  </a> <!-- createValidAccount -->
-                  <span class="method-name">createValidAccount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteAccountInvalidId">
-                  </a> <!-- deleteAccountInvalidId -->
-                  <span class="method-name">deleteAccountInvalidId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="deleteValidAccount">
-                  </a> <!-- deleteValidAccount -->
-                  <span class="method-name">deleteValidAccount</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchAcountById">
-                  </a> <!-- searchAcountById -->
-                  <span class="method-name">searchAcountById</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchAcountByNonExistentId">
-                  </a> <!-- searchAcountByNonExistentId -->
-                  <span class="method-name">searchAcountByNonExistentId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchAcountsByClientId">
-                  </a> <!-- searchAcountsByClientId -->
-                  <span class="method-name">searchAcountsByClientId</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchAcountsByNonExistentClientId">
-                  </a> <!-- searchAcountsByNonExistentClientId -->
-                  <span class="method-name">searchAcountsByNonExistentClientId</span>
+                  <a name="searchByClientId">
+                  </a> <!-- searchByClientId -->
+                  <span class="method-name">searchByClientId</span>
+                  <div class="stack-trace">java.util.NoSuchElementException
+	at com.payulatam.samples.bank.service.TransactionDao.searchByClientId(TransactionDao.java:97)
+	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByClientId(TransactionDaoTest.java:203)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Services-class-passed -->
+          </div> <!-- suite-Services-class-failed -->
           <div class="suite-Services-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -363,6 +384,148 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Services-class-passed -->
+          <div class="suite-Services-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.payulatam.samples.bank.test.service.TransactionDaoTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createCreditTransaction">
+                  </a> <!-- createCreditTransaction -->
+                  <span class="method-name">createCreditTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createDebitTransaction">
+                  </a> <!-- createDebitTransaction -->
+                  <span class="method-name">createDebitTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createInvalidCreditTransaction">
+                  </a> <!-- createInvalidCreditTransaction -->
+                  <span class="method-name">createInvalidCreditTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createInvalidNegativeValueTransaction">
+                  </a> <!-- createInvalidNegativeValueTransaction -->
+                  <span class="method-name">createInvalidNegativeValueTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createInvalidNullTypeTransaction">
+                  </a> <!-- createInvalidNullTypeTransaction -->
+                  <span class="method-name">createInvalidNullTypeTransaction</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByAccountId">
+                  </a> <!-- searchByAccountId -->
+                  <span class="method-name">searchByAccountId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByNonExistentAccountId">
+                  </a> <!-- searchByNonExistentAccountId -->
+                  <span class="method-name">searchByNonExistentAccountId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByNonExistentCientId">
+                  </a> <!-- searchByNonExistentCientId -->
+                  <span class="method-name">searchByNonExistentCientId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByNonExistentNumber">
+                  </a> <!-- searchByNonExistentNumber -->
+                  <span class="method-name">searchByNonExistentNumber</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchByNumber">
+                  </a> <!-- searchByNumber -->
+                  <span class="method-name">searchByNumber</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Services-class-passed -->
+          <div class="suite-Services-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.payulatam.samples.bank.test.service.AccountDaoTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="createAccountInvalidClientId">
+                  </a> <!-- createAccountInvalidClientId -->
+                  <span class="method-name">createAccountInvalidClientId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createValidAccount">
+                  </a> <!-- createValidAccount -->
+                  <span class="method-name">createValidAccount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteAccountInvalidId">
+                  </a> <!-- deleteAccountInvalidId -->
+                  <span class="method-name">deleteAccountInvalidId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deleteValidAccount">
+                  </a> <!-- deleteValidAccount -->
+                  <span class="method-name">deleteValidAccount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAcountById">
+                  </a> <!-- searchAcountById -->
+                  <span class="method-name">searchAcountById</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAcountByNonExistentId">
+                  </a> <!-- searchAcountByNonExistentId -->
+                  <span class="method-name">searchAcountByNonExistentId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAcountsByClientId">
+                  </a> <!-- searchAcountsByClientId -->
+                  <span class="method-name">searchAcountsByClientId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchAcountsByNonExistentClientId">
+                  </a> <!-- searchAcountsByNonExistentClientId -->
+                  <span class="method-name">searchAcountsByNonExistentClientId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Services-class-passed -->
         </div> <!-- panel Services -->
         <div panel-name="test-xml-Services" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -383,6 +546,11 @@
       &lt;class name=&quot;com.payulatam.samples.bank.test.service.ClientDaoTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ClientDao --&gt;
+  &lt;test name=&quot;TransactionDao&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.payulatam.samples.bank.test.service.TransactionDaoTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TransactionDao --&gt;
   &lt;test name=&quot;Utils&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.payulatam.samples.bank.test.service.UtilsTest&quot;/&gt;
@@ -403,6 +571,9 @@
               </li>
               <li>
                 <span class="test-name">ClientDao (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">TransactionDao (1 class)</span>
               </li>
               <li>
                 <span class="test-name">Utils (1 class)</span>
@@ -431,7 +602,7 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(19);
+data.addRows(30);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'createAccountInvalidClientId')
 data.setCell(0, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
@@ -443,76 +614,120 @@ data.setCell(1, 3, 3);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'searchAcountsByClientId')
 data.setCell(2, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 3);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'searchAcountById')
-data.setCell(3, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
-data.setCell(3, 3, 1);
+data.setCell(3, 1, 'searchByAccountId')
+data.setCell(3, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(3, 3, 2);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'searchAcountsByNonExistentClientId')
 data.setCell(4, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
 data.setCell(4, 3, 1);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'searchByNonExistentId')
-data.setCell(5, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
+data.setCell(5, 1, 'deleteAccountInvalidId')
+data.setCell(5, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
 data.setCell(5, 3, 1);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'searchById')
-data.setCell(6, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
+data.setCell(6, 1, 'searchAcountById')
+data.setCell(6, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
 data.setCell(6, 3, 1);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'deleteNonExistentClient')
-data.setCell(7, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
+data.setCell(7, 1, 'searchAcountByNonExistentId')
+data.setCell(7, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
 data.setCell(7, 3, 1);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'validatePhoneNumberWithSpaces')
-data.setCell(8, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(8, 1, 'searchById')
+data.setCell(8, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
 data.setCell(8, 3, 1);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'createValidateEmptyName')
-data.setCell(9, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(9, 1, 'searchByNonExistentCientId')
+data.setCell(9, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
 data.setCell(9, 3, 1);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'createValidateNameWithOutSpaces')
-data.setCell(10, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(10, 1, 'createCreditTransaction')
+data.setCell(10, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
 data.setCell(10, 3, 1);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'searchAcountByNonExistentId')
-data.setCell(11, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
-data.setCell(11, 3, 0);
+data.setCell(11, 1, 'createValidateNameWithSpaces')
+data.setCell(11, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(11, 3, 1);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'deleteAccountInvalidId')
-data.setCell(12, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
-data.setCell(12, 3, 0);
+data.setCell(12, 1, 'validateEmptyPhoneNumber')
+data.setCell(12, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(12, 3, 1);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'deleteValidAccount')
-data.setCell(13, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
-data.setCell(13, 3, 0);
+data.setCell(13, 1, 'validateInvalidPhoneNumber')
+data.setCell(13, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(13, 3, 1);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'createValidClient')
-data.setCell(14, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
+data.setCell(14, 1, 'deleteValidAccount')
+data.setCell(14, 2, 'com.payulatam.samples.bank.test.service.AccountDaoTest')
 data.setCell(14, 3, 0);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'updateNonExistingClient')
+data.setCell(15, 1, 'searchByNonExistentId')
 data.setCell(15, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
 data.setCell(15, 3, 0);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'createValidateNameWithSpaces')
-data.setCell(16, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(16, 1, 'createValidClient')
+data.setCell(16, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
 data.setCell(16, 3, 0);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'validateEmptyPhoneNumber')
-data.setCell(17, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(17, 1, 'updateNonExistingClient')
+data.setCell(17, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
 data.setCell(17, 3, 0);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'validateInvalidPhoneNumber')
-data.setCell(18, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(18, 1, 'deleteNonExistentClient')
+data.setCell(18, 2, 'com.payulatam.samples.bank.test.service.ClientDaoTest')
 data.setCell(18, 3, 0);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'searchByNumber')
+data.setCell(19, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(19, 3, 0);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'createInvalidNegativeValueTransaction')
+data.setCell(20, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(20, 3, 0);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'searchByNonExistentNumber')
+data.setCell(21, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(21, 3, 0);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'searchByNonExistentAccountId')
+data.setCell(22, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(22, 3, 0);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'createInvalidCreditTransaction')
+data.setCell(23, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(23, 3, 0);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'createDebitTransaction')
+data.setCell(24, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(24, 3, 0);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'createInvalidNullTypeTransaction')
+data.setCell(25, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(25, 3, 0);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'searchByClientId')
+data.setCell(26, 2, 'com.payulatam.samples.bank.test.service.TransactionDaoTest')
+data.setCell(26, 3, 0);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'createValidateNameWithOutSpaces')
+data.setCell(27, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(27, 3, 0);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'validatePhoneNumberWithSpaces')
+data.setCell(28, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(28, 3, 0);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'createValidateEmptyName')
+data.setCell(29, 2, 'com.payulatam.samples.bank.test.service.UtilsTest')
+data.setCell(29, 3, 0);
 window.suiteTableData['Services']= { tableData: data, tableDiv: 'times-div-Services'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 ms</span>
+              <span class="suite-total-time">Total running time: 26 ms</span>
               <div id="times-div-Services">
               </div> <!-- times-div-Services -->
             </div> <!-- times-div -->
@@ -552,187 +767,179 @@ return data;
                 <span class="method-start">347 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId())</span>
-                <span class="method-start">407 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">407 ms</span>
+                <span class="method-start">403 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createAccountInvalidClientId</span>
-                <span class="method-start">407 ms</span>
+                <span class="method-start">403 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId())</span>
+                <span class="method-start">403 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId())</span>
-                <span class="method-start">417 ms</span>
+                <span class="method-start">413 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">414 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createValidAccount</span>
+                <span class="method-start">414 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
                 <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.createValidAccount())</span>
-                <span class="method-start">417 ms</span>
+                <span class="method-start">414 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">418 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">createValidAccount</span>
+                <span class="method-name">deleteAccountInvalidId</span>
                 <span class="method-start">418 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.createValidAccount())</span>
-                <span class="method-start">421 ms</span>
+                <span class="method-start">418 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteAccountInvalidId())</span>
-                <span class="method-start">422 ms</span>
+                <span class="method-start">418 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">422 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">deleteAccountInvalidId</span>
-                <span class="method-start">422 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteAccountInvalidId())</span>
-                <span class="method-start">423 ms</span>
+                <span class="method-start">420 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount())</span>
-                <span class="method-start">424 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">424 ms</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deleteValidAccount</span>
-                <span class="method-start">424 ms</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount())</span>
-                <span class="method-start">425 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById())</span>
-                <span class="method-start">425 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount())</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">425 ms</span>
+                <span class="method-start">422 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchAcountById</span>
-                <span class="method-start">425 ms</span>
+                <span class="method-start">422 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById())</span>
-                <span class="method-start">426 ms</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount())</span>
+                <span class="method-start">422 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId())</span>
-                <span class="method-start">426 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById())</span>
+                <span class="method-start">422 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">427 ms</span>
+                <span class="method-start">423 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchAcountByNonExistentId</span>
-                <span class="method-start">427 ms</span>
+                <span class="method-start">423 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId())</span>
-                <span class="method-start">428 ms</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById())</span>
+                <span class="method-start">423 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByClientId())</span>
-                <span class="method-start">428 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId())</span>
+                <span class="method-start">423 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId())</span>
+                <span class="method-start">424 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">428 ms</span>
+                <span class="method-start">425 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchAcountsByClientId</span>
-                <span class="method-start">428 ms</span>
+                <span class="method-start">425 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByClientId())</span>
+                <span class="method-start">425 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByClientId())</span>
-                <span class="method-start">431 ms</span>
+                <span class="method-start">428 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientI...)</span>
-                <span class="method-start">431 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">431 ms</span>
+                <span class="method-start">429 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">searchAcountsByNonExistentClientId</span>
-                <span class="method-start">431 ms</span>
+                <span class="method-start">429 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientI...)</span>
-                <span class="method-start">432 ms</span>
-              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientI...)</span>
+                <span class="method-start">429 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-class after">
                 <span class="method-name">springTestContextAfterTestClass</span>
-                <span class="method-start">432 ms</span>
+                <span class="method-start">431 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientI...)</span>
+                <span class="method-start">431 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.payulatam.samples.bank.test.service.ClientDaoTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">springTestContextBeforeTestClass</span>
-                <span class="method-start">449 ms</span>
+                <span class="method-start">451 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">springTestContextPrepareTestInstance</span>
-                <span class="method-start">449 ms</span>
+                <span class="method-start">451 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">455 ms</span>
+                <span class="method-start">456 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient())</span>
-                <span class="method-start">455 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">455 ms</span>
+                <span class="method-start">457 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createValidClient</span>
-                <span class="method-start">456 ms</span>
+                <span class="method-start">457 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient())</span>
-                <span class="method-start">456 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient())</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient())</span>
                 <span class="method-start">457 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">457 ms</span>
+                <span class="method-start">458 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">deleteNonExistentClient</span>
-                <span class="method-start">457 ms</span>
+                <span class="method-start">458 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient())</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient())</span>
                 <span class="method-start">458 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById())</span>
-                <span class="method-start">459 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient())</span>
+                <span class="method-start">458 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
@@ -743,13 +950,17 @@ return data;
                 <span class="method-start">459 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById())</span>
-                <span class="method-start">461 ms</span>
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient())</span>
+                <span class="method-start">459 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId())</span>
-                <span class="method-start">461 ms</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById())</span>
+                <span class="method-start">459 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById())</span>
+                <span class="method-start">460 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">461 ms</span>
@@ -758,60 +969,261 @@ return data;
                 <span class="method-name">searchByNonExistentId</span>
                 <span class="method-start">461 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId())</span>
+                <span class="method-start">461 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
                 <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId())</span>
                 <span class="method-start">462 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient())</span>
+                <span class="method-name">beforeMethod</span>
                 <span class="method-start">463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient())</span>
                 <span class="method-start">463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">updateNonExistingClient</span>
                 <span class="method-start">463 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient())</span>
-                <span class="method-start">464 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">springTestContextAfterTestClass</span>
                 <span class="method-start">464 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient())</span>
+                <span class="method-start">464 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.payulatam.samples.bank.test.service.TransactionDaoTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextBeforeTestClass</span>
+                <span class="method-start">471 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">springTestContextPrepareTestInstance</span>
+                <span class="method-start">472 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">480 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createCreditTransaction())</span>
+                <span class="method-start">480 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createCreditTransaction</span>
+                <span class="method-start">481 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">482 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createCreditTransaction())</span>
+                <span class="method-start">482 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createDebitTransaction())</span>
+                <span class="method-start">482 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createDebitTransaction</span>
+                <span class="method-start">483 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createDebitTransaction())</span>
+                <span class="method-start">483 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidCreditTransactio...)</span>
+                <span class="method-start">484 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">485 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createInvalidCreditTransaction</span>
+                <span class="method-start">485 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidCreditTransactio...)</span>
+                <span class="method-start">486 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNegativeValueTra...)</span>
+                <span class="method-start">486 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">487 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createInvalidNegativeValueTransaction</span>
+                <span class="method-start">487 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNegativeValueTra...)</span>
+                <span class="method-start">487 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">488 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createInvalidNullTypeTransaction</span>
+                <span class="method-start">488 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNullTypeTransact...)</span>
+                <span class="method-start">488 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">489 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchByAccountId</span>
+                <span class="method-start">489 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNullTypeTransact...)</span>
+                <span class="method-start">489 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByAccountId())</span>
+                <span class="method-start">489 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByAccountId())</span>
+                <span class="method-start">491 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">492 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">searchByClientId</span>
+                <span class="method-start">492 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByClientId())</span>
+                <span class="method-start">492 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">493 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchByNonExistentAccountId</span>
+                <span class="method-start">493 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByClientId())</span>
+                <span class="method-start">493 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentAccountId(...)</span>
+                <span class="method-start">493 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">494 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchByNonExistentCientId</span>
+                <span class="method-start">494 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentAccountId(...)</span>
+                <span class="method-start">494 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentCientId())</span>
+                <span class="method-start">494 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">495 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentCientId())</span>
+                <span class="method-start">495 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentNumber())</span>
+                <span class="method-start">495 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchByNonExistentNumber</span>
+                <span class="method-start">496 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentNumber())</span>
+                <span class="method-start">496 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">searchByNumber</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">springTestContextAfterTestClass</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-method after">
+                <span class="method-name">springTestContextAfterTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNumber())</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">springTestContextBeforeTestMethod(public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNumber())</span>
+                <span class="method-start">497 ms</span>
+              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.payulatam.samples.bank.test.service.UtilsTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setup</span>
-                <span class="method-start">473 ms</span>
+                <span class="method-start">508 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">createValidateEmptyName</span>
-                <span class="method-start">473 ms</span>
+                <span class="method-start">509 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createValidateNameWithOutSpaces</span>
-                <span class="method-start">474 ms</span>
+                <span class="method-start">510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createValidateNameWithSpaces</span>
-                <span class="method-start">475 ms</span>
+                <span class="method-start">510 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateEmptyPhoneNumber</span>
-                <span class="method-start">476 ms</span>
+                <span class="method-start">511 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validateInvalidPhoneNumber</span>
-                <span class="method-start">477 ms</span>
+                <span class="method-start">512 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">validatePhoneNumberWithSpaces</span>
-                <span class="method-start">477 ms</span>
+                <span class="method-start">513 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

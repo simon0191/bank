@@ -11,6 +11,11 @@
 			<class name="com.payulatam.samples.bank.test.service.ClientDaoTest" />
 		</classes>
 	</test>
+	<test name="TransactionDao">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.TransactionDaoTest" />
+		</classes>
+	</test>
 	<test name="Utils">
 		<classes>
 			<class name="com.payulatam.samples.bank.test.service.UtilsTest" />
