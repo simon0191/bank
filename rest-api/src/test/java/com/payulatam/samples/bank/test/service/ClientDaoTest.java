@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.test;
+package com.payulatam.samples.bank.test.service;
 
 import java.util.NoSuchElementException;
 
@@ -61,7 +61,7 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	@Test(expectedExceptions = NoSuchElementException.class)
 	public void updateNotExistingClient() {
 		Client client = new Client();
-		client.setId("idNoExistente");
+		client.setId("notExistentId");
 		client.setName("Simon");
 		client.setAddress("cra 45");
 		client.setTelephone("123456");
@@ -77,14 +77,13 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	@Test(expectedExceptions = NoSuchElementException.class)
 	public void deleteNotExistingClient() {
 
-		EasyMock.expect(gigaSpace.takeById(Client.class, "idNoExistente")).andReturn(null);
+		EasyMock.expect(gigaSpace.takeById(Client.class, "notExistentId")).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		clientDAO.delete("idNoExistente");
+		clientDAO.delete("notExistentId");
 		EasyMock.verify(gigaSpace);
 	}
-
-	@Test(expectedExceptions = NoSuchElementException.class)
+	@Test
 	public void searchById() {
 		Client expected = new Client();
 		expected.setId("id");
@@ -95,6 +94,17 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 		Client result = clientDAO.searchById(expected.getId());
 		Assert.assertEquals(result, expected);
 		
+		EasyMock.verify(gigaSpace);
+	}
+	@Test(expectedExceptions=NoSuchElementException.class)
+	public void searchByNotExistentId() {
+		Client expected = new Client();
+		expected.setId("notExistentId");
+		
+		EasyMock.expect(gigaSpace.readById(Client.class, expected.getId())).andReturn(null);
+		EasyMock.replay(gigaSpace);
+
+		clientDAO.searchById(expected.getId());
 		EasyMock.verify(gigaSpace);
 	}
 

@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.test;
+package com.payulatam.samples.bank.test.service;
 
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

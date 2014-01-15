@@ -3,12 +3,12 @@
 <suite name="Services">
 	<test name="ClientDAO">
 		<classes>
-			<class name="com.payulatam.samples.bank.test.ClientDaoTest" />
+			<class name="com.payulatam.samples.bank.test.service.ClientDaoTest" />
 		</classes>
 	</test>
 	<test name="Utils">
 		<classes>
-			<class name="com.payulatam.samples.bank.test.UtilsTest" />
+			<class name="com.payulatam.samples.bank.test.service.UtilsTest" />
 		</classes>
 	</test>
 </suite>  	
