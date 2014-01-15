@@ -6,6 +6,7 @@ import org.easymock.EasyMock;
 import org.junit.runner.RunWith;
 import org.openspaces.core.GigaSpace;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
@@ -16,14 +17,14 @@ import org.testng.annotations.Test;
 
 import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.ClientDAO;
+import com.payulatam.samples.bank.service.ClientDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
-	private ClientDAO clientDAO;
+	private ClientDao clientDAO;
 
 	private GigaSpace gigaSpace;
 
@@ -59,9 +60,9 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	}
 
 	@Test(expectedExceptions = NoSuchElementException.class)
-	public void updateNotExistingClient() {
+	public void updateNonExistingClient() {
 		Client client = new Client();
-		client.setId("notExistentId");
+		client.setId("nonExistentId");
 		client.setName("Simon");
 		client.setAddress("cra 45");
 		client.setTelephone("123456");
@@ -75,12 +76,12 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	}
 
 	@Test(expectedExceptions = NoSuchElementException.class)
-	public void deleteNotExistingClient() {
+	public void deleteNonExistentClient() {
 
-		EasyMock.expect(gigaSpace.takeById(Client.class, "notExistentId")).andReturn(null);
+		EasyMock.expect(gigaSpace.takeById(Client.class, "nonExistentId")).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		clientDAO.delete("notExistentId");
+		clientDAO.delete("nonExistentId");
 		EasyMock.verify(gigaSpace);
 	}
 	@Test
@@ -97,9 +98,9 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.verify(gigaSpace);
 	}
 	@Test(expectedExceptions=NoSuchElementException.class)
-	public void searchByNotExistentId() {
+	public void searchByNonExistentId() {
 		Client expected = new Client();
-		expected.setId("notExistentId");
+		expected.setId("nonExistentId");
 		
 		EasyMock.expect(gigaSpace.readById(Client.class, expected.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);

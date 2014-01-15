@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.ClientDAO;
+import com.payulatam.samples.bank.service.ClientDao;
 
 @Controller
 @RequestMapping(value = "/clients")
@@ -19,7 +19,7 @@ public class ClientController {
 	 * @Autowired private GigaSpace gigaSpace;
 	 */
 	@Autowired
-	ClientDAO clientDAO;
+	ClientDao clientDAO;
 
 	@ResponseBody
 	@RequestMapping(

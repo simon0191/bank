@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Services">
-	<test name="ClientDAO">
+	<test name="AccountDao">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.AccountDaoTest" />
+		</classes>
+	</test>
+	<test name="ClientDao">
 		<classes>
 			<class name="com.payulatam.samples.bank.test.service.ClientDaoTest" />
 		</classes>

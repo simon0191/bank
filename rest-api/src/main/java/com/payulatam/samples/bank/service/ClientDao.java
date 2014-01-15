@@ -13,7 +13,7 @@ import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Client;
 
 @Service
-public class ClientDAO {
+public class ClientDao {
 
 	@GigaSpaceContext
 	private GigaSpace gigaSpace;
