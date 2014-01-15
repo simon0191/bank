@@ -30,11 +30,13 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 	@Autowired
 	private TransactionDao transactionDao;
 
+	//TODO: autowire AccountDAO y settearle el gigaspace
+	
+	@Autowired
 	private GigaSpace gigaSpace;
 
 	@BeforeClass
 	public void beforeClass() {
-		gigaSpace = EasyMock.createNiceMock(GigaSpace.class);
 		transactionDao.setGigaSpace(gigaSpace);
 	}
 

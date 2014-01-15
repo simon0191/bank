@@ -3,18 +3,22 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.payulatam.samples.bank.test.service.AccountDaoTest">
+      <class name="com.payulatam.samples.bank.test.service.ClientDaoTest">
         <methods>
-          <include name="createValidAccount"/>
+          <include name="beforeClass"/>
+          <include name="updateNonExistingClient"/>
+          <include name="searchByNonExistentId"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="searchById"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="deleteNonExistentClient"/>
+          <include name="createValidClient"/>
           <include name="beforeMethod"/>
-          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.AccountDaoTest -->
+      </class> <!-- com.payulatam.samples.bank.test.service.ClientDaoTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

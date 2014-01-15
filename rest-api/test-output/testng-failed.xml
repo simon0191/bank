@@ -3,22 +3,22 @@
 <suite name="Failed suite [Services]">
   <test name="TransactionDao(failed)">
     <classes>
-      <class name="com.payulatam.samples.bank.test.service.UtilsTest">
+      <class name="com.payulatam.samples.bank.test.service.AccountDaoTest">
         <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.UtilsTest -->
-      <class name="com.payulatam.samples.bank.test.service.ClientDaoTest">
-        <methods>
-          <include name="beforeClass"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="beforeMethod"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.ClientDaoTest -->
+      </class> <!-- com.payulatam.samples.bank.test.service.AccountDaoTest -->
+      <class name="com.payulatam.samples.bank.test.service.UtilsTest">
+        <methods>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.payulatam.samples.bank.test.service.UtilsTest -->
       <class name="com.payulatam.samples.bank.test.service.TransactionDaoTest">
         <methods>
           <include name="searchByClientId"/>
@@ -31,17 +31,17 @@
           <include name="beforeClass"/>
         </methods>
       </class> <!-- com.payulatam.samples.bank.test.service.TransactionDaoTest -->
-      <class name="com.payulatam.samples.bank.test.service.AccountDaoTest">
+      <class name="com.payulatam.samples.bank.test.service.ClientDaoTest">
         <methods>
+          <include name="beforeClass"/>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextBeforeTestMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
           <include name="beforeMethod"/>
-          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.AccountDaoTest -->
+      </class> <!-- com.payulatam.samples.bank.test.service.ClientDaoTest -->
     </classes>
   </test> <!-- TransactionDao(failed) -->
 </suite> <!-- Failed suite [Services] -->

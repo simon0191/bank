@@ -25,11 +25,11 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	@Autowired
 	private ClientDao clientDAO;
 
+	@Autowired
 	private GigaSpace gigaSpace;
 
 	@BeforeClass
 	public void beforeClass() {
-		gigaSpace = EasyMock.createNiceMock(GigaSpace.class);
 		clientDAO.setGigaSpace(gigaSpace);
 	}
 
