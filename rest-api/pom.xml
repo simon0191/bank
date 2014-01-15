@@ -55,12 +55,28 @@
 			<artifactId>gs-runtime</artifactId>
 			<version>${gigaspaces.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.gigaspaces</groupId>
 			<artifactId>gs-openspaces</artifactId>
 			<version>${gigaspaces.version}</version>
 		</dependency>
+		<!-- TestNG -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.1.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Easy Mock -->
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>3.2</version>
+			<scope>test</scope>
+		</dependency>
+
+
 
 	</dependencies>
 

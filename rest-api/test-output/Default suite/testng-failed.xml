@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.payulatam.samples.bank.test.ClientDaoTest">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="createValidateNameWithSpaces"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="beforeSuite"/>
+          <include name="beforeTest"/>
+          <include name="beforeClass"/>
+          <include name="createValidateNameWithOutSpaces"/>
+        </methods>
+      </class> <!-- com.payulatam.samples.bank.test.ClientDaoTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
