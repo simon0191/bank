@@ -25,13 +25,13 @@ import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
-import com.payulatam.samples.bank.service.TransactionDao;
+import com.payulatam.samples.bank.service.ITransactionDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 	@Autowired
-	private TransactionDao transactionDao;
+	private ITransactionDao transactionDao;
 
 	@Autowired
 	private GigaSpace gigaSpace;

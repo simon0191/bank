@@ -16,14 +16,14 @@ import org.testng.annotations.Test;
 
 import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.ClientDao;
+import com.payulatam.samples.bank.service.IClientDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
-	private ClientDao clientDAO;
+	private IClientDao clientDAO;
 
 	@Autowired
 	private GigaSpace gigaSpace;

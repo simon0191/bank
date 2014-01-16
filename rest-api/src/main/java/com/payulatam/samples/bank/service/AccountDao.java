@@ -16,7 +16,7 @@ import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 
 @Service
-public class AccountDao {
+public class AccountDao implements IAccountDao {
 
 	//@GigaSpaceContext
 	@Autowired
@@ -25,6 +25,10 @@ public class AccountDao {
 	@Autowired
 	private Utils utils;
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IAccountDao#create(java.lang.String)
+	 */
+	@Override
 	public Account create(String clientId) throws NoSuchElementException {
 		Client owner = gigaSpace.readById(Client.class, clientId);
 		if (owner == null) {
@@ -39,6 +43,10 @@ public class AccountDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IAccountDao#delete(java.lang.String)
+	 */
+	@Override
 	public Account delete(String id) {
 		Account result = gigaSpace.takeById(Account.class, id);
 		if (result == null) {
@@ -47,6 +55,10 @@ public class AccountDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IAccountDao#searchById(java.lang.String)
+	 */
+	@Override
 	public Account searchById(String id) throws NoSuchElementException {
 		Account result = gigaSpace.readById(Account.class, id);
 		if (result == null) {
@@ -55,6 +67,10 @@ public class AccountDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IAccountDao#searchAccountsByClientId(java.lang.String)
+	 */
+	@Override
 	public List<Account> searchAccountsByClientId(String clientId) {
 		Client client = gigaSpace.readById(Client.class,clientId);
 		if(client == null) {

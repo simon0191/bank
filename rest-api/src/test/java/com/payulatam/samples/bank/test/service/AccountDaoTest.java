@@ -20,14 +20,14 @@ import com.gigaspaces.client.WriteModifiers;
 import com.gigaspaces.query.ISpaceQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.AccountDao;
+import com.payulatam.samples.bank.service.IAccountDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
-	private AccountDao accountDao;
+	private IAccountDao accountDao;
 
 	@Autowired
 	private GigaSpace gigaSpace;

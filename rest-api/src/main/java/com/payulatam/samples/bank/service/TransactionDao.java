@@ -19,15 +19,19 @@ import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
 
 @Service
-public class TransactionDao {
+public class TransactionDao implements ITransactionDao {
 
 	// @GigaSpaceContext
 	@Autowired
 	private GigaSpace gigaSpace;
 
 	@Autowired
-	private AccountDao accountDao;
+	private IAccountDao accountDao;
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#create(java.lang.String, com.payulatam.samples.bank.common.TransactionType, java.math.BigDecimal)
+	 */
+	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
 		List<String> invalidArguments = new ArrayList<String>();
@@ -67,6 +71,10 @@ public class TransactionDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByNumber(java.lang.String)
+	 */
+	@Override
 	public Transaction searchByNumber(String id) throws NoSuchElementException {
 		Transaction result = gigaSpace.readById(Transaction.class, id);
 		if (result == null) {
@@ -75,6 +83,10 @@ public class TransactionDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByAccountId(java.lang.String)
+	 */
+	@Override
 	public List<Transaction> searchByAccountId(String accountId) throws NoSuchElementException {
 		Account account = gigaSpace.readById(Account.class, accountId);
 		if (account == null) {
@@ -86,6 +98,10 @@ public class TransactionDao {
 		return Arrays.asList(result);
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByClientId(java.lang.String)
+	 */
+	@Override
 	public List<Transaction> searchByClientId(String ownerId) throws NoSuchElementException {
 		List<Account> accounts = accountDao.searchAccountsByClientId(ownerId);
 		List<Transaction> result = new ArrayList<Transaction>();
@@ -95,6 +111,10 @@ public class TransactionDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByDateBetweenAndAccount(java.util.Date, java.util.Date, java.lang.String)
+	 */
+	@Override
 	public List<Transaction> searchByDateBetweenAndAccount(Date startDate, Date endDate,
 			String accountId) throws NoSuchElementException, IllegalArgumentException {
 		Account account = gigaSpace.readById(Account.class, accountId);
@@ -110,6 +130,10 @@ public class TransactionDao {
 		return Arrays.asList(result);
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByDateBetweenAndClient(java.util.Date, java.util.Date, java.lang.String)
+	 */
+	@Override
 	public List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
 			String ownerId) throws NoSuchElementException {
 		if(endDate.before(startDate) || endDate.after(new Date())) {

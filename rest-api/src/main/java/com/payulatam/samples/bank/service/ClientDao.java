@@ -13,7 +13,7 @@ import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Client;
 
 @Service
-public class ClientDao {
+public class ClientDao implements IClientDao {
 
 	//@GigaSpaceContext
 	@Autowired
@@ -22,6 +22,10 @@ public class ClientDao {
 	@Autowired
 	private Utils utils;
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IClientDao#create(java.lang.String, java.lang.String, java.lang.String)
+	 */
+	@Override
 	public Client create(String name, String address, String telephone)
 			throws IllegalArgumentException {
 
@@ -36,6 +40,10 @@ public class ClientDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IClientDao#update(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 */
+	@Override
 	public Client update(String id, String name, String address, String telephone)
 			throws IllegalArgumentException, NoSuchElementException {
 		Client result = gigaSpace.readById(Client.class, id);
@@ -56,6 +64,10 @@ public class ClientDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IClientDao#delete(java.lang.String)
+	 */
+	@Override
 	public Client delete(String id) {
 		Client result = gigaSpace.takeById(Client.class, id);
 		if (result == null) {
@@ -64,6 +76,10 @@ public class ClientDao {
 		return result;
 	}
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.IClientDao#searchById(java.lang.String)
+	 */
+	@Override
 	public Client searchById(String id) {
 		Client result = gigaSpace.readById(Client.class, id);
 		if (result == null) {
