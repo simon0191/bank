@@ -21,10 +21,11 @@
 	<mvc:annotation-driven />
 
 
-	<os-core:giga-space-context />
+	<!-- <os-core:giga-space-context /> -->
 	<os-core:space id="space"
 		url="jini://*/*/space?locators=192.168.4.160:7102" />
 	<os-core:giga-space id="gigaSpace" space="space" />
 
+	
 
 </beans>

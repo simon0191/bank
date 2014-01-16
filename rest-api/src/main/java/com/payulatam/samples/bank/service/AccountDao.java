@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openspaces.core.GigaSpace;
-import org.openspaces.core.context.GigaSpaceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gigaspaces.client.WriteModifiers;
+import com.gigaspaces.query.ISpaceQuery;
 import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
@@ -18,16 +18,12 @@ import com.payulatam.samples.bank.common.Client;
 @Service
 public class AccountDao {
 
-	@GigaSpaceContext
+	//@GigaSpaceContext
+	@Autowired
 	private GigaSpace gigaSpace;
 
 	@Autowired
 	private Utils utils;
-
-	public void setGigaSpace(GigaSpace gigaSpace) {
-		this.gigaSpace = gigaSpace;
-
-	}
 
 	public Account create(String clientId) throws NoSuchElementException {
 		Client owner = gigaSpace.readById(Client.class, clientId);
@@ -64,7 +60,8 @@ public class AccountDao {
 		if(client == null) {
 			throw new NoSuchElementException();
 		}
-		Account[] result = gigaSpace.readMultiple(new SQLQuery<Account>(Account.class, "clientId = ?", clientId));
+		ISpaceQuery<Account> query = new SQLQuery<Account>(Account.class, "clientId = ?", clientId);
+		Account[] result = gigaSpace.readMultiple(query);
 		return Arrays.asList(result);
 	}
 

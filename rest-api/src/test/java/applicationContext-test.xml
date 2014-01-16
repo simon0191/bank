@@ -15,12 +15,6 @@
 		primary="true" id="gigaSpace">
 		<constructor-arg value="org.openspaces.core.GigaSpace" />
 	</bean>
-
-
 	<context:component-scan base-package="com.payulatam.samples.bank.service" />
-
-<!-- 	<bean id="clientDao"  class="com.payulatam.samples.bank.service.ClientDao"></bean> -->
-<!-- 	<bean id="utils"      class="com.payulatam.samples.bank.service.Utils"></bean> -->
-<!-- 	<bean id="accountDao" class="com.payulatam.samples.bank.service.AccountDao"></bean> -->
 
 </beans>

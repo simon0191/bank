@@ -15,7 +15,8 @@ import com.payulatam.samples.bank.common.Client;
 @Service
 public class ClientDao {
 
-	@GigaSpaceContext
+	//@GigaSpaceContext
+	@Autowired
 	private GigaSpace gigaSpace;
 
 	@Autowired
@@ -70,15 +71,6 @@ public class ClientDao {
 		}
 		return result;
 	}
-
-	public void setGigaSpace(GigaSpace gigaSpace) {
-		this.gigaSpace = gigaSpace;
-	}
-
-	public GigaSpace getGigaSpace() {
-		return gigaSpace;
-	}
-
 	private void validate(String name, String address, String telephone)
 			throws IllegalArgumentException {
 		List<String> invalidFields = new ArrayList<String>();

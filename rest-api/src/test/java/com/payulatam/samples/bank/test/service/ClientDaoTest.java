@@ -28,11 +28,6 @@ public class ClientDaoTest extends AbstractTestNGSpringContextTests {
 	@Autowired
 	private GigaSpace gigaSpace;
 
-	@BeforeClass
-	public void beforeClass() {
-		clientDAO.setGigaSpace(gigaSpace);
-	}
-
 	@BeforeMethod
 	public void beforeMethod() {
 		EasyMock.resetToNice(gigaSpace);

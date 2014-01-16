@@ -8,32 +8,25 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openspaces.core.GigaSpace;
-import org.openspaces.core.context.GigaSpaceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gigaspaces.client.WriteModifiers;
+import com.gigaspaces.query.ISpaceQuery;
 import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
-import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
 
 @Service
 public class TransactionDao {
 
-	@GigaSpaceContext
+	// @GigaSpaceContext
+	@Autowired
 	private GigaSpace gigaSpace;
 
 	@Autowired
-	private Utils utils;
-	
-	@Autowired
 	private AccountDao accountDao;
-
-	public void setGigaSpace(GigaSpace gigaSpace) {
-		this.gigaSpace = gigaSpace;
-	}
 
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
@@ -83,21 +76,51 @@ public class TransactionDao {
 	}
 
 	public List<Transaction> searchByAccountId(String accountId) throws NoSuchElementException {
-		Account account = gigaSpace.readById(Account.class,accountId);
-		if(account == null) {
+		Account account = gigaSpace.readById(Account.class, accountId);
+		if (account == null) {
 			throw new NoSuchElementException();
 		}
-		Transaction[] result = gigaSpace.readMultiple(new SQLQuery<Transaction>("accountId = ?",accountId));
+		ISpaceQuery<Transaction> query = new SQLQuery<Transaction>(Transaction.class,
+				"accountId = ?", accountId);
+		Transaction[] result = gigaSpace.readMultiple(query);
 		return Arrays.asList(result);
 	}
 
 	public List<Transaction> searchByClientId(String ownerId) throws NoSuchElementException {
-		Client owner = gigaSpace.readById(Client.class,ownerId);
-		if(owner == null) {
-			throw new NoSuchElementException();
+		List<Account> accounts = accountDao.searchAccountsByClientId(ownerId);
+		List<Transaction> result = new ArrayList<Transaction>();
+		for (Account a : accounts) {
+			result.addAll(this.searchByAccountId(a.getId()));
 		}
-		
-		return null;
+		return result;
+	}
+
+	public List<Transaction> searchByDateBetweenAndAccount(Date startDate, Date endDate,
+			String accountId) throws NoSuchElementException, IllegalArgumentException {
+		Account account = gigaSpace.readById(Account.class, accountId);
+		if (account == null) {
+			throw new NoSuchElementException("Non existent account");
+		}
+		if(endDate.before(startDate) || endDate.after(new Date())) {
+			throw new IllegalArgumentException("startDate should be before endDate and both should be before today");
+		}
+		ISpaceQuery<Transaction> query = new SQLQuery<Transaction>(Transaction.class,
+				"date >= ? AND date <= ? AND accountId = ?", startDate, endDate, accountId);
+		Transaction[] result = gigaSpace.readMultiple(query);
+		return Arrays.asList(result);
+	}
+
+	public List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
+			String ownerId) throws NoSuchElementException {
+		if(endDate.before(startDate) || endDate.after(new Date())) {
+			throw new IllegalArgumentException("startDate should be before endDate and both should be before today");
+		}
+		List<Account> accounts = accountDao.searchAccountsByClientId(ownerId);
+		List<Transaction> result = new ArrayList<Transaction>();
+		for(Account a:accounts) {
+			result.addAll(this.searchByDateBetweenAndAccount(startDate, endDate, a.getId()));
+		}
+		return result;
 	}
 
 }

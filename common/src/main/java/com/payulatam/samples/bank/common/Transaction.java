@@ -9,7 +9,9 @@ import javax.persistence.Table;
 
 import com.gigaspaces.annotation.pojo.SpaceClass;
 import com.gigaspaces.annotation.pojo.SpaceId;
+import com.gigaspaces.annotation.pojo.SpaceIndex;
 import com.gigaspaces.annotation.pojo.SpaceRouting;
+import com.gigaspaces.metadata.index.SpaceIndexType;
 
 @Entity
 @Table(name = "BANK_TRANSACTION")
@@ -40,6 +42,7 @@ public class Transaction {
 		return value;
 	}
 
+	@SpaceIndex(type=SpaceIndexType.EXTENDED)
 	public Date getDate() {
 		return date;
 	}
