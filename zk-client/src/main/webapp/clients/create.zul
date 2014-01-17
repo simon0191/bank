@@ -6,17 +6,17 @@
 			<rows>
 				<row>
 					<label width="60px" value="Name" />
-					<textbox
+					<textbox id="nameTxt"
 						constraint="/[a-zA-Z\s]+/: Please enter a valid Name" />
 				</row>
 				<row>
-					<label width="60px" value="Address" />
-					<textbox
+					<label width="60px" value="Address"/>
+					<textbox id="addressTxt"
 						constraint="/[\w\s#\-]+/: Please enter a valid address" />
 				</row>
 				<row>
 					<label width="60px" value="Phone number" />
-					<textbox
+					<textbox id="phoneNumberTxt"
 						constraint="/[\d]+/: Please enter a valid phone number" />
 				</row>
 				<row>
@@ -24,6 +24,16 @@
 				</row>
 			</rows>
 
+		</grid>
+		<grid id="resultsGrid" visible="false">
+			<columns>
+				<column></column>
+				<column>ID</column>
+				<column>Name</column>
+				<column>Address</column>
+				<column>Phone number</column>
+				<column>Options</column>
+			</columns>
 		</grid>
 
 	</window>
