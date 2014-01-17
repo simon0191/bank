@@ -90,8 +90,8 @@ public class ClientDao implements IClientDao {
 	@Override
 	public List<Client> search(String clientId, String name, String address, String telephone) {
 		Client template = new Client();
-		if (name != null && !name.equals("")) {
-			template.setName(name);
+		if (clientId != null && !clientId.equals("")) {
+			template.setId(clientId);
 		}
 		if (address != null && !address.equals("")) {
 			template.setAddress(address);
@@ -99,6 +99,10 @@ public class ClientDao implements IClientDao {
 		if (telephone != null && !telephone.equals("")) {
 			template.setTelephone(telephone);
 		}
+		if (name != null && !name.equals("")) {
+			template.setName(name);
+		}
+		
 		this.validate(template.getName(), template.getAddress(), template.getTelephone());
 		Client[] result = gigaSpace.readMultiple(template);
 		return Arrays.asList(result);

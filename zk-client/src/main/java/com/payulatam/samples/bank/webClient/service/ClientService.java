@@ -37,27 +37,30 @@ public class ClientService {
 		return result;
 	}
 
-	public List<Client> searchClient(String name, String address, String phoneNumber)
+	public List<Client> searchClient(String id, String name, String address, String phoneNumber)
 			throws URISyntaxException {
-
 		RestTemplate restTemplate = new RestTemplate();
-		List<BasicNameValuePair> params = new ArrayList<BasicNameValuePair>();
+		StringBuilder sb = new StringBuilder();
+		if (id != null && !id.equals("")) {
+			sb.append("id=");
+			sb.append(id);
+		}
 		if (name != null && !name.equals("")) {
-			params.add(new BasicNameValuePair("name", name));
+			sb.append("name=");
+			sb.append(name);
 		}
 		if (address != null && !address.equals("")) {
-			params.add(new BasicNameValuePair("address", address));
+			sb.append("address=");
+			sb.append(address);
 		}
 		if (phoneNumber != null && !phoneNumber.equals("")) {
-			params.add(new BasicNameValuePair("telephone", phoneNumber));
+			sb.append("telephone=");
+			sb.append(phoneNumber);
 		}
 
-		String query = URLEncodedUtils.format(params, "UTF-8");
+		Client[] result = restTemplate.getForObject(
+				"http://localhost:8080/rest-api/clients/search?" + sb.toString(), Client[].class);
 
-		String url = (new URI("http", null, "localhost", 8080, "/rest-api/clients/search", query,
-				null)).toString();
-
-		Client[] result = restTemplate.getForObject(url, Client[].class);
 		return Arrays.asList(result);
 	}
 

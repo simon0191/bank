@@ -6,8 +6,8 @@
 
 			<rows>
 				<row>
-					<label width="60px" value="Id" />
-					<textbox />
+					<label width="60px" value="Id"/>
+					<textbox id="clientId"/>
 				</row>
 				<row>
 					<label width="60px" value="Name" />

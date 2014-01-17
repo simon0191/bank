@@ -9,6 +9,7 @@ import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Messagebox;
+import org.zkoss.zul.Textbox;
 
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.webClient.utils.FormValidation;
@@ -19,6 +20,8 @@ public class SearchClientView extends ClientFormView {
 	
 	@Wire
 	private Grid searchClientForm;
+	@Wire
+	private Textbox clientId;
 
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
@@ -31,7 +34,7 @@ public class SearchClientView extends ClientFormView {
 		if (!isValid) {
 			Messagebox.show("Datos invalidos");
 		} else {
-			List<Client> clients = clientService.searchClient(super.nameTxt.getText(), super.addressTxt.getText(),
+			List<Client> clients = clientService.searchClient(clientId.getText(),super.nameTxt.getText(), super.addressTxt.getText(),
 					super.phoneNumberTxt.getText());
 			super.populateResultsGrid(clients);
 		}
