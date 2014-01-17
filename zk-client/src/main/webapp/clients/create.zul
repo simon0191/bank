@@ -1,0 +1,31 @@
+<zk>
+	<window title="Create Client" width="600px" apply="com.payulatam.samples.bank.webClient.controller.ClientController">
+		4
+		<grid id="createClientForm">
+
+			<rows>
+				<row>
+					<label width="60px" value="Name" />
+					<textbox
+						constraint="/[a-zA-Z\s]+/: Please enter a valid Name" />
+				</row>
+				<row>
+					<label width="60px" value="Address" />
+					<textbox
+						constraint="/[\w\s#\-]+/: Please enter a valid address" />
+				</row>
+				<row>
+					<label width="60px" value="Phone number" />
+					<textbox
+						constraint="/[\d]+/: Please enter a valid phone number" />
+				</row>
+				<row>
+					<button id="submitCreateClient" label="submit"/>
+				</row>
+			</rows>
+
+		</grid>
+
+	</window>
+
+</zk>
