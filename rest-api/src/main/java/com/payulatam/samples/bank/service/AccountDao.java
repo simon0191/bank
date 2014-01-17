@@ -50,7 +50,7 @@ public class AccountDao implements IAccountDao {
 	public Account delete(String id) {
 		Account result = gigaSpace.takeById(Account.class, id);
 		if (result == null) {
-			throw new NoSuchElementException();
+			throw new NoSuchElementException("");
 		}
 		return result;
 	}

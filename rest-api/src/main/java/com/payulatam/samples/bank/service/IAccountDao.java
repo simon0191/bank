@@ -7,12 +7,12 @@ import com.payulatam.samples.bank.common.Account;
 
 public interface IAccountDao {
 
-	public abstract Account create(String clientId) throws NoSuchElementException;
+	Account create(String clientId);
 
-	public abstract Account delete(String id);
+	Account delete(String id);
 
-	public abstract Account searchById(String id) throws NoSuchElementException;
+	Account searchById(String id);
 
-	public abstract List<Account> searchAccountsByClientId(String clientId);
+	List<Account> searchAccountsByClientId(String clientId);
 
 }

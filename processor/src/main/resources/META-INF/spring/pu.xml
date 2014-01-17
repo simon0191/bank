@@ -23,10 +23,10 @@
         A JDBC pooled data source that connects to the HSQL server the mirror starts.
     -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="org.hsqldb.jdbcDriver"/>
-        <property name="url" value="jdbc:hsqldb:hsql://localhost/testDB"/>
-        <property name="username" value="sa"/>
-        <property name="password" value=""/>
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost/bank"/>
+        <property name="username" value="simon"/>
+        <property name="password" value="simon"/>
     </bean>
 
     <!--
@@ -36,12 +36,14 @@
         <property name="dataSource" ref="dataSource"/>
         <property name="annotatedClasses">
             <list>
-                <value>com.payulatam.samples.bank.common.Data</value>
+                <value>com.payulatam.samples.bank.common.Transaction</value>
+                <value>com.payulatam.samples.bank.common.Account</value>
+                <value>com.payulatam.samples.bank.common.Client</value>
             </list>
         </property>
         <property name="hibernateProperties">
             <props>
-                <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop>
                 <prop key="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
                 <prop key="hibernate.cache.use_second_level_cache">false</prop>
                 <prop key="hibernate.cache.use_query_cache">false</prop>
