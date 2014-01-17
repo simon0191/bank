@@ -33,9 +33,13 @@ public class ClientController extends SelectorComposer<Component> {
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
-		resultsGrid.setVisible(false);
 	}
 
+	@Listen("onCreate = grid#resultsGrid")
+	public void onCreateResultsGrid() {
+		resultsGrid.setVisible(false);
+	}
+	
 	@Listen("onClick = button#submitCreateClient")
 	public void submitCreateClient() {
 		boolean isValid = FormValidation.isValid(createClientForm);
@@ -51,14 +55,8 @@ public class ClientController extends SelectorComposer<Component> {
 		if (!isValid) {
 			Messagebox.show("Datos invalidos");
 		} else {
-			Messagebox.show("Datos enviados");
 			populateResultsGrid();
 		}
-	}
-
-	@Listen("onClick = button.editButton")
-	public void editClient() {
-		Messagebox.show("Click");
 	}
 
 	private void populateResultsGrid() {
@@ -95,6 +93,7 @@ public class ClientController extends SelectorComposer<Component> {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
 						Messagebox.show(editButton.getAttribute("clientId").toString());
+						
 					}
 				});
 			}
