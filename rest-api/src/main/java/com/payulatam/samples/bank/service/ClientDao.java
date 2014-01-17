@@ -1,6 +1,7 @@
 package com.payulatam.samples.bank.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -26,8 +27,7 @@ public class ClientDao implements IClientDao {
 	 * @see com.payulatam.samples.bank.service.IClientDao#create(java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
-	public Client create(String name, String address, String telephone)
-			throws IllegalArgumentException {
+	public Client create(String name, String address, String telephone) {
 
 		this.validate(name, address, telephone);
 
@@ -44,8 +44,7 @@ public class ClientDao implements IClientDao {
 	 * @see com.payulatam.samples.bank.service.IClientDao#update(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
-	public Client update(String id, String name, String address, String telephone)
-			throws IllegalArgumentException, NoSuchElementException {
+	public Client update(String id, String name, String address, String telephone) {
 		Client result = gigaSpace.readById(Client.class, id);
 		if (result == null) {
 			throw new NoSuchElementException();
@@ -87,19 +86,37 @@ public class ClientDao implements IClientDao {
 		}
 		return result;
 	}
-	private void validate(String name, String address, String telephone)
-			throws IllegalArgumentException {
+	
+	@Override
+	public List<Client> search(String clientId, String name, String address, String telephone) {
+		Client template = new Client();
+		if (name != null && !name.equals("")) {
+			template.setName(name);
+		}
+		if (address != null && !address.equals("")) {
+			template.setAddress(address);
+		}
+		if (telephone != null && !telephone.equals("")) {
+			template.setTelephone(telephone);
+		}
+		this.validate(template.getName(), template.getAddress(), template.getTelephone());
+		Client[] result = gigaSpace.readMultiple(template);
+		return Arrays.asList(result);
+	}
+	
+	
+	private void validate(String name, String address, String telephone) {
 		List<String> invalidFields = new ArrayList<String>();
 		boolean hasInvalidFields = false;
-		if (!utils.validateTelephone(telephone)) {
+		if (telephone!= null && !utils.validateTelephone(telephone)) {
 			hasInvalidFields = true;
 			invalidFields.add("telephone");
 		}
-		if (!utils.validateAddress(address)) {
+		if (address != null && !utils.validateAddress(address)) {
 			hasInvalidFields = true;
 			invalidFields.add("address");
 		}
-		if (!utils.validateName(name)) {
+		if (name != null && !utils.validateName(name)) {
 			hasInvalidFields = true;
 			invalidFields.add("name");
 		}

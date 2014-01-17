@@ -1,5 +1,7 @@
 package com.payulatam.samples.bank.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -38,22 +40,33 @@ public class ClientController {
 	@RequestMapping(value = "/update", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(value = HttpStatus.OK)
 	public Client update(@RequestBody Client client) {
-		Client result = clientDAO.update(client.getId(), client.getName(), client.getAddress(), client.getTelephone());
+		Client result = clientDAO.update(client.getId(), client.getName(), client.getAddress(),
+				client.getTelephone());
 		return result;
 	}
-	
+
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Client delete(@PathVariable(value="id") String clientId) {
+	public Client delete(@PathVariable(value = "id") String clientId) {
 		Client result = clientDAO.delete(clientId);
 		return result;
-	}	
-	
+	}
+
 	@ResponseBody
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Client searchById(@PathVariable(value="id")  String clientId) {
+	public Client searchById(@PathVariable(value = "id") String clientId) {
 		Client result = clientDAO.searchById(clientId);
 		return result;
-	}	
-	
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/search", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Client> search(
+			@RequestParam(value = "id",required=false) String clientId,
+			@RequestParam(value = "name",required=false) String name,
+			@RequestParam(value = "address",required=false) String address,
+			@RequestParam(value = "telephone",required=false) String telephone) {
+		List<Client> result = clientDAO.search(clientId,name,address,telephone);
+		return result;
+	}
 
 }
