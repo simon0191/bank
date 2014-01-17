@@ -1,5 +1,5 @@
 <zk>
-	<window title="Create Client" width="600px" apply="com.payulatam.samples.bank.webClient.controller.ClientController">
+	<window title="Create Client" width="600px" apply="com.payulatam.samples.bank.webClient.view.clients.CreateClientView">
 		4
 		<grid id="createClientForm">
 

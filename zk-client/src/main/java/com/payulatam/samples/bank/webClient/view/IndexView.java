@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.webClient.controller;
+package com.payulatam.samples.bank.webClient.view;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
@@ -7,7 +7,7 @@ import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Include;
 import org.zkoss.zul.Window;
 
-public class IndexController extends SelectorComposer<Component>{
+public class IndexView extends SelectorComposer<Component>{
 	
 	private static final long serialVersionUID = 2955106721594052755L;
 	

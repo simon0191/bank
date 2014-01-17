@@ -1,6 +1,6 @@
 <zk>
 	<window
-		apply="com.payulatam.samples.bank.webClient.controller.IndexController"
+		apply="com.payulatam.samples.bank.webClient.view.IndexView"
 		id="indexWindow" width="70%">
 		12
 		<panel border="center">

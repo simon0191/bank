@@ -1,6 +1,6 @@
 <zk>
 	<window title="Search Client" width="600px"
-		apply="com.payulatam.samples.bank.webClient.controller.ClientController">
+		apply="com.payulatam.samples.bank.webClient.view.clients.SearchClientView">
 		4
 		<grid id="searchClientForm">
 
@@ -11,21 +11,21 @@
 				</row>
 				<row>
 					<label width="60px" value="Name" />
-					<textbox
+					<textbox id="nameTxt"
 						constraint="/[a-zA-Z\s]*/: Please enter a valid Name" />
 				</row>
 				<row>
-					<label width="60px" value="Address" />
-					<textbox
+					<label width="60px" value="Address"/>
+					<textbox id="addressTxt"
 						constraint="/[\w\s#\-]*/: Please enter a valid address" />
 				</row>
 				<row>
 					<label width="60px" value="Phone number" />
-					<textbox
+					<textbox id="phoneNumberTxt"
 						constraint="/[\d]*/: Please enter a valid phone number" />
 				</row>
 				<row>
-					<button id="submitSearchClient" label="search" />
+					<button id="submitSearchClient" label="submit"/>
 				</row>
 			</rows>
 
