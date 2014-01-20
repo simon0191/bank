@@ -14,14 +14,17 @@ import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Grid;
+import org.zkoss.zul.Hbox;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
+import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.RowRenderer;
 import org.zkoss.zul.Textbox;
 
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.webClient.service.ClientService;
+import com.payulatam.samples.bank.webClient.utils.StringUtils;
 
 public class ClientFormView extends SelectorComposer<Component> {
 	private static final long serialVersionUID = -2234514242292139908L;
@@ -57,17 +60,34 @@ public class ClientFormView extends SelectorComposer<Component> {
 				new Label(client.getName()).setParent(row);
 				new Label(client.getAddress()).setParent(row);
 				new Label(client.getTelephone()).setParent(row);
+				
+				final Hbox options = new Hbox();
+				options.setParent(row);
+				
 				final Button editButton = new Button("Edit");
-				editButton.setClass("editButton");
 				editButton.setAttribute("clientId", client.getId());
-				editButton.setParent(row);
+				editButton.setParent(options);
 				editButton.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
 						Sessions.getCurrent().setAttribute("clientToUpdate", client);
-						Executions.sendRedirect("clients/update.zul");
+						Executions.sendRedirect("/clients/update.zul");
 					}
 				});
+				
+				final Button deleteButton = new Button("Delete");
+				deleteButton.setAttribute("clientId", client.getId());
+				deleteButton.setParent(options);
+				deleteButton.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
+					@Override
+					public void onEvent(MouseEvent ev) throws Exception {
+						Client deleted = clientService.deleteClient(client.getId());
+						
+//						Messagebox.show(StringUtils.concatenate(deleted.toString()," deleted"));
+						Messagebox.show(" deleted");
+					}
+				});
+				
 			}
 
 		});

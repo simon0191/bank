@@ -1,7 +1,6 @@
 <zk>
 	<window
-		apply="com.payulatam.samples.bank.webClient.view.transactions.CreateTransactionView"
-		width="70%">
+		apply="com.payulatam.samples.bank.webClient.view.transactions.CreateTransactionView">
 		12
 		<panel border="center">
 			<panelchildren>
@@ -12,19 +11,19 @@
 							<rows>
 								<row>
 									<label width="60px" value="Client" />
-									<combobox id="clientsCombo"></combobox>
+									<combobox id="clientsCombo" constraint=" no empty"></combobox>
 								</row>
 								<row>
 									<label width="60px" value="Account" />
-									<combobox id="accountsCombo"></combobox>
+									<combobox id="accountsCombo" constraint=" no empty"></combobox>
 								</row>
 								<row>
 									<label width="60px" value="Type" />
-									<combobox id="typeCombo"></combobox>
+									<combobox id="typeCombo" constraint=" no empty"></combobox>
 								</row>
 								<row>
 									<label width="60px" value="Value" />
-									<doublebox id="valueBox" />
+									<doublebox id="valueBox" constraint=" no negative, no zero"/>
 								</row>
 								<row>
 									<button id="submitCreateTransaction"

@@ -2,12 +2,10 @@ package com.payulatam.samples.bank.webClient.service;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
-import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.message.BasicNameValuePair;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -20,7 +18,7 @@ public class ClientService {
 	public Client searchClientById(String id) {
 		RestTemplate restTemplate = new RestTemplate();
 		Client client = restTemplate.getForObject(
-				StringUtils.concatenate("http://localhost:8080/rest-api/clients/", id),
+				StringUtils.concatenate("http://localhost:8080/rest-api/clients/searchById/", id),
 				Client.class);
 		return client;
 	}
@@ -75,11 +73,25 @@ public class ClientService {
 		client.setName(name);
 		client.setAddress(address);
 		client.setTelephone(phoneNumber);
-		
+
 		String url = "http://localhost:8080/rest-api/clients/update";
-		
-		Client result = restTemplate.postForObject(url, client,Client.class);
+
+		Client result = restTemplate.postForObject(url, client, Client.class);
 		return result;
 
+	}
+
+	public Client deleteClient(String id) {
+		RestTemplate restTemplate = new RestTemplate();
+		Client result = null;
+		try {
+		result = restTemplate.getForObject(
+				"http://localhost:8080/rest-api/clients/delete/?id=" + id, Client.class);
+		} catch(NoSuchElementException nse) {
+			throw nse;
+		} catch(Exception e) {
+			
+		}
+		return result;
 	}
 }

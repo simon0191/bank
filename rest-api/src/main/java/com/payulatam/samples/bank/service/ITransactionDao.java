@@ -10,21 +10,21 @@ import com.payulatam.samples.bank.common.TransactionType;
 
 public interface ITransactionDao {
 
-	public abstract Transaction create(String accountId, TransactionType type, BigDecimal value)
+	Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException;
 
-	public abstract Transaction searchByNumber(String id) throws NoSuchElementException;
+	Transaction searchByNumber(String id) throws NoSuchElementException;
 
-	public abstract List<Transaction> searchByAccountId(String accountId)
+	List<Transaction> searchByAccountId(String accountId)
 			throws NoSuchElementException;
 
-	public abstract List<Transaction> searchByClientId(String ownerId)
+	List<Transaction> searchByClientId(String ownerId)
 			throws NoSuchElementException;
 
-	public abstract List<Transaction> searchByDateBetweenAndAccount(Date startDate, Date endDate,
+	List<Transaction> searchByDateBetweenAndAccount(Date startDate, Date endDate,
 			String accountId) throws NoSuchElementException, IllegalArgumentException;
 
-	public abstract List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
+	List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
 			String ownerId) throws NoSuchElementException;
 
 }

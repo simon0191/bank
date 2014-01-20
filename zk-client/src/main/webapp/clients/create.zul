@@ -1,7 +1,6 @@
 <zk>
-	<window title="Create Client" width="600px"
+	<window title="Create Client"
 		apply="com.payulatam.samples.bank.webClient.view.clients.CreateClientView">
-		4
 		<panel border="center">
 			<panelchildren>
 				<hbox spacing="0" width="100%" height="100%">

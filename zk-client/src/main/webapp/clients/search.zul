@@ -1,5 +1,5 @@
 <zk>
-	<window title="Search Client" width="600px"
+	<window title="Search Client"
 		apply="com.payulatam.samples.bank.webClient.view.clients.SearchClientView">
 		<panel border="center">
 			<panelchildren>

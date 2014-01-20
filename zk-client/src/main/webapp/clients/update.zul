@@ -1,5 +1,5 @@
 <zk>
-	<window title="Update Client" width="600px"
+	<window title="Update Client"
 		apply="com.payulatam.samples.bank.webClient.view.clients.UpdateClientView">
 		<panel border="center">
 			<panelchildren>

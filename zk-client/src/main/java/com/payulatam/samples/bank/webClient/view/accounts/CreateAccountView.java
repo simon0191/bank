@@ -13,7 +13,7 @@ import org.zkoss.zul.Button;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
-import org.zkoss.zul.Div;
+import org.zkoss.zul.Grid;
 import org.zkoss.zul.ListModel;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Messagebox;
@@ -43,7 +43,7 @@ public class CreateAccountView extends SelectorComposer<Component>{
 	private Button createClientButton;
 	
 	@Wire
-	private Div createAccountForm;
+	private Grid createAccountForm;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {

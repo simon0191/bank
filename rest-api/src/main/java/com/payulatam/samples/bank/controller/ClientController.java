@@ -45,14 +45,14 @@ public class ClientController {
 		return result;
 	}
 
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Client delete(@PathVariable(value = "id") String clientId) {
+	@RequestMapping(value = "/delete", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Client delete(@RequestParam(value = "id",required=true) String clientId) {
 		Client result = clientDAO.delete(clientId);
 		return result;
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/searchById/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Client searchById(@PathVariable(value = "id") String clientId) {
 		Client result = clientDAO.searchById(clientId);
 		return result;
