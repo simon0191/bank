@@ -44,4 +44,9 @@ public class MenuView extends SelectorComposer<Component>{
     	Executions.sendRedirect("/transactions/create.zul");
     }
     
+    @Listen("onClick = button#createTransactionsReport")
+    public void loadTransactionsReport() {
+    	Executions.sendRedirect("/reports/transactionsByClientAndDate.zul");
+    }
+    
 }

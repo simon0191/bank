@@ -1,6 +1,5 @@
 <zk>
 	<window apply="com.payulatam.samples.bank.webClient.view.MenuView">
-		12
 
 		<tree width="300px">
 			<treecols>
@@ -80,6 +79,25 @@
 								<treecell>
 									<button id="searchTransaction"
 										label="Search transactions" />
+								</treecell>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+				
+				<!-- REPORTS -->
+				<treeitem>
+					<treerow>
+						<treecell>
+							<label value="Transactions" />
+						</treecell>
+					</treerow>
+					<treechildren>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="createTransactionsReport"
+										label="Create transactions report" />
 								</treecell>
 							</treerow>
 						</treeitem>

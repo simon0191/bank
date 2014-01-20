@@ -34,6 +34,7 @@ public class TransactionDao implements ITransactionDao {
 	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
+		System.out.println("----------- Type: "+type);
 		List<String> invalidArguments = new ArrayList<String>();
 		if (value.compareTo(BigDecimal.ZERO) <= 0) {
 			invalidArguments.add("Transaction value should be >= 0");
@@ -54,7 +55,7 @@ public class TransactionDao implements ITransactionDao {
 		}
 		Transaction result = new Transaction();
 		result.setAccountId(account.getId());
-		result.setDate(new Date());
+		result.setTransactionDate(new Date());
 		result.setValue(value);
 
 		switch (type) {
@@ -121,12 +122,13 @@ public class TransactionDao implements ITransactionDao {
 		if (account == null) {
 			throw new NoSuchElementException("Non existent account");
 		}
-		if(endDate.before(startDate) || endDate.after(new Date())) {
-			throw new IllegalArgumentException("startDate should be before endDate and both should be before today");
+		if(endDate.before(startDate)) {
+			throw new IllegalArgumentException("startDate should be before endDate");
 		}
 		ISpaceQuery<Transaction> query = new SQLQuery<Transaction>(Transaction.class,
-				"date >= ? AND date <= ? AND accountId = ?", startDate, endDate, accountId);
+				"transactionDate >= ? AND transactionDate <= ? AND accountId = ?", startDate, endDate, accountId);
 		Transaction[] result = gigaSpace.readMultiple(query);
+		System.out.println("----------- "+Arrays.asList(result));
 		return Arrays.asList(result);
 	}
 
@@ -136,8 +138,8 @@ public class TransactionDao implements ITransactionDao {
 	@Override
 	public List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
 			String ownerId) throws NoSuchElementException {
-		if(endDate.before(startDate) || endDate.after(new Date())) {
-			throw new IllegalArgumentException("startDate should be before endDate and both should be before today");
+		if(endDate.before(startDate)) {
+			throw new IllegalArgumentException("startDate should be before endDate");
 		}
 		List<Account> accounts = accountDao.searchAccountsByClientId(ownerId);
 		List<Transaction> result = new ArrayList<Transaction>();

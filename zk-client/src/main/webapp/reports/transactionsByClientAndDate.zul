@@ -1,0 +1,47 @@
+<zk>
+	<window title="Search Client"
+		apply="com.payulatam.samples.bank.webClient.view.reports.TransactionsReportView">
+		<panel border="center">
+			<panelchildren>
+				<hbox spacing="0" width="100%" height="100%">
+					<include src="/menu.zul" width="100%" />
+					<vbox>
+
+						<grid id="reportForm">
+							<rows>
+								<row>
+									<label width="60px" value="Client" />
+									<combobox id="clientsCombo"
+										width="50%">
+									</combobox>
+								</row>
+								<row>
+									<label value="Start date" />
+									<datebox id="startDate" />
+								</row>
+								<row>
+									<label value="End date" />
+									<datebox id="endDate" />
+								</row>
+								<row>
+									<button label="Submit"
+										id="createReport" />
+								</row>
+							</rows>
+						</grid>
+						<grid id="resultsGrid" visible="false">
+							<columns>
+								<column>Account</column>
+								<column>Balance</column>
+								<column>Debits</column>
+								<column>Credits</column>
+							</columns>
+						</grid>
+					</vbox>
+				</hbox>
+			</panelchildren>
+		</panel>
+
+	</window>
+
+</zk>

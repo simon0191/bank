@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -23,7 +25,7 @@ public class Transaction {
 	private String id;
 	private TransactionType type;
 	private BigDecimal value;
-	private Date date;
+	private Date transactionDate;
 
 	public Transaction() {
 	}
@@ -33,7 +35,8 @@ public class Transaction {
 	public String getId() {
 		return this.id;
 	}
-
+	
+	@Enumerated
 	public TransactionType getType() {
 		return type;
 	}
@@ -43,14 +46,14 @@ public class Transaction {
 	}
 
 	@SpaceIndex(type=SpaceIndexType.EXTENDED)
-	public Date getDate() {
-		return date;
+	public Date getTransactionDate() {
+		return transactionDate;
 	}
 
 	@Override
 	public String toString() {
 		return "Transaction [type=" + type + ", value=" + value + ", date="
-				+ date + "]";
+				+ transactionDate + "]";
 	}
 
 	public String getAccountId() {
@@ -69,8 +72,8 @@ public class Transaction {
 		this.value = value;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setTransactionDate(Date transactionDate) {
+		this.transactionDate = transactionDate;
 	}
 
 	public void setId(String id) {
