@@ -24,30 +24,30 @@ public class AccountController {
 	IAccountDao accountDao;
 
 	@ResponseBody
-	@RequestMapping(value = "/create/{clientId}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/create/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(value = HttpStatus.CREATED)
-	public Account create(@PathVariable String clientId) {
+	public Account create(@PathVariable(value="id") String clientId) {
 		Account result = accountDao.create(clientId);
 		return result;
 	}
 	
 	@ResponseBody
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Account delete(@PathVariable String accountId) {
+	public Account delete(@PathVariable(value="id") String accountId) {
 		Account result = accountDao.delete(accountId);
 		return result;
 	}	
 	
 	@ResponseBody
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public Account searchById(@PathVariable String accountId) {
+	public Account searchById(@PathVariable(value="id") String accountId) {
 		Account result = accountDao.searchById(accountId);
 		return result;
 	}	
 	
 	@ResponseBody
 	@RequestMapping(value = "/searchByClient/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Account> searchByClientId(@PathVariable String clientId) {
+	public List<Account> searchByClientId(@PathVariable(value="id") String clientId) {
 		List<Account> result = accountDao.searchAccountsByClientId(clientId);
 		return result;
 	}	
