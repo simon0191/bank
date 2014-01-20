@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
+import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.event.EventListener;
 import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zk.ui.event.MouseEvent;
 import org.zkoss.zk.ui.select.SelectorComposer;
-import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Button;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.Label;
 import org.zkoss.zul.ListModelList;
-import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.Row;
 import org.zkoss.zul.RowRenderer;
 import org.zkoss.zul.Textbox;
@@ -44,14 +44,15 @@ public class ClientFormView extends SelectorComposer<Component> {
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
+		configResultsGrid();
 	}
 	
-	@Listen("onCreate = grid#resultsGrid")
-	public void onCreateResultsGrid() {
+	public void configResultsGrid() {
 		resultsGrid.setVisible(false);
 		resultsGrid.setRowRenderer(new RowRenderer<Client>() {
 			public void render(final Row row, final Client client, final int index)
 					throws Exception {
+				new Label(String.valueOf(index)).setParent(row);
 				new Label(client.getId()).setParent(row);
 				new Label(client.getName()).setParent(row);
 				new Label(client.getAddress()).setParent(row);
@@ -63,7 +64,8 @@ public class ClientFormView extends SelectorComposer<Component> {
 				editButton.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
-						Messagebox.show(editButton.getAttribute("clientId").toString());
+						Sessions.getCurrent().setAttribute("clientToUpdate", client);
+						Executions.sendRedirect("clients/update.zul");
 					}
 				});
 			}

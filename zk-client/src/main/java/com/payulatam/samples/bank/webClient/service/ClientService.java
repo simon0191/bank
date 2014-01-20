@@ -12,15 +12,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.payulatam.samples.bank.common.Client;
+import com.payulatam.samples.bank.webClient.utils.StringUtils;
 
 @Service
 public class ClientService {
 
-	public Client searchClientById(String id) throws URISyntaxException {
+	public Client searchClientById(String id) {
 		RestTemplate restTemplate = new RestTemplate();
-		URI uri = new URI("http", "localhost:8080/rest-api", "/clients/" + id, null);
-		System.out.println(uri.toString());
-		Client client = restTemplate.getForObject(uri.toString(), Client.class);
+		Client client = restTemplate.getForObject(
+				StringUtils.concatenate("http://localhost:8080/rest-api/clients/", id),
+				Client.class);
 		return client;
 	}
 
@@ -63,7 +64,22 @@ public class ClientService {
 		return Arrays.asList(result);
 	}
 
-	public List<Client> getAllClients() throws URISyntaxException {
+	public List<Client> getAllClients() {
 		return this.searchClient("", "", "", "");
+	}
+
+	public Client updateClient(String id, String name, String address, String phoneNumber) {
+		RestTemplate restTemplate = new RestTemplate();
+		Client client = new Client();
+		client.setId(id);
+		client.setName(name);
+		client.setAddress(address);
+		client.setTelephone(phoneNumber);
+		
+		String url = "http://localhost:8080/rest-api/clients/update";
+		
+		Client result = restTemplate.postForObject(url, client,Client.class);
+		return result;
+
 	}
 }

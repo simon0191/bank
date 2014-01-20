@@ -37,13 +37,13 @@ public class CreateAccountView extends SelectorComposer<Component>{
 	private ClientService clientService;
 	
 	@Wire
-	Combobox clientsCombo;
+	private Combobox clientsCombo;
 	
 	@Wire
-	Button createClientButton;
+	private Button createClientButton;
 	
 	@Wire
-	Div createAccountForm;
+	private Div createAccountForm;
 	
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
@@ -64,11 +64,10 @@ public class CreateAccountView extends SelectorComposer<Component>{
 		clientsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
 	}
 
-	private void populateClientsCombo() throws URISyntaxException {
+	private void populateClientsCombo() {
 		List<Client> clients = clientService.getAllClients();
 		ListModel<Client> clientListModel = new ListModelList<Client>(clients);
 		clientsCombo.setModel(clientListModel);
-		
 	}
 	
 	@Listen("onClick = button#createAccount")
