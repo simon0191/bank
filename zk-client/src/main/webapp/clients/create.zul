@@ -1,41 +1,52 @@
 <zk>
-	<window title="Create Client" width="600px" apply="com.payulatam.samples.bank.webClient.view.clients.CreateClientView">
+	<window title="Create Client" width="600px"
+		apply="com.payulatam.samples.bank.webClient.view.clients.CreateClientView">
 		4
-		<grid id="createClientForm">
+		<panel border="center">
+			<panelchildren>
+				<hbox spacing="0" width="100%" height="100%">
+					<include src="/menu.zul" width="100%" />
+					<vbox>
+						<grid id="createClientForm">
 
-			<rows>
-				<row>
-					<label width="60px" value="Name" />
-					<textbox id="nameTxt"
-						constraint="/[a-zA-Z\s]+/: Please enter a valid Name" />
-				</row>
-				<row>
-					<label width="60px" value="Address"/>
-					<textbox id="addressTxt"
-						constraint="/[\w\s#\-]+/: Please enter a valid address" />
-				</row>
-				<row>
-					<label width="60px" value="Phone number" />
-					<textbox id="phoneNumberTxt"
-						constraint="/[\d]+/: Please enter a valid phone number" />
-				</row>
-				<row>
-					<button id="submitCreateClient" label="submit"/>
-				</row>
-			</rows>
+							<rows>
+								<row>
+									<label width="60px" value="Name" />
+									<textbox id="nameTxt"
+										constraint="/[a-zA-Z\s]+/: Please enter a valid Name" />
+								</row>
+								<row>
+									<label width="60px" value="Address" />
+									<textbox id="addressTxt"
+										constraint="/[\w\s#\-]+/: Please enter a valid address" />
+								</row>
+								<row>
+									<label width="60px"
+										value="Phone number" />
+									<textbox id="phoneNumberTxt"
+										constraint="/[\d]+/: Please enter a valid phone number" />
+								</row>
+								<row>
+									<button id="submitCreateClient"
+										label="submit" />
+								</row>
+							</rows>
 
-		</grid>
-		<grid id="resultsGrid" visible="false">
-			<columns>
-				<column></column>
-				<column>ID</column>
-				<column>Name</column>
-				<column>Address</column>
-				<column>Phone number</column>
-				<column>Options</column>
-			</columns>
-		</grid>
-
+						</grid>
+						<grid id="resultsGrid" visible="false">
+							<columns>
+								<column></column>
+								<column>ID</column>
+								<column>Name</column>
+								<column>Address</column>
+								<column>Phone number</column>
+								<column>Options</column>
+							</columns>
+						</grid>
+					</vbox>
+				</hbox>
+			</panelchildren>
+		</panel>
 	</window>
 
 </zk>

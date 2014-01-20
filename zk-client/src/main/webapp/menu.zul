@@ -1,0 +1,92 @@
+<zk>
+	<window apply="com.payulatam.samples.bank.webClient.view.MenuView">
+		12
+
+		<tree width="300px">
+			<treecols>
+				<treecol>Menu</treecol>
+			</treecols>
+			<treechildren>
+				<!-- CLIENTS -->
+				<treeitem>
+					<treerow>
+						<treecell>
+							<label value="Clients" />
+						</treecell>
+					</treerow>
+					<treechildren>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="createClient"
+										label="Create client" />
+								</treecell>
+							</treerow>
+						</treeitem>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="searchClient"
+										label="Search client" />
+								</treecell>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+				<!-- ACCOUNTS -->
+				<treeitem>
+					<treerow>
+						<treecell>
+							<label value="Accounts" />
+						</treecell>
+					</treerow>
+					<treechildren>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="createAccount"
+										label="Create account" />
+								</treecell>
+							</treerow>
+						</treeitem>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="searchAccount"
+										label="Search account" />
+								</treecell>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+				<!-- TRANSACTIONS -->
+				<treeitem>
+					<treerow>
+						<treecell>
+							<label value="Transactions" />
+						</treecell>
+					</treerow>
+					<treechildren>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="createTransaction"
+										label="Create transactions" />
+								</treecell>
+							</treerow>
+						</treeitem>
+						<treeitem>
+							<treerow>
+								<treecell>
+									<button id="searchTransaction"
+										label="Search transactions" />
+								</treecell>
+							</treerow>
+						</treeitem>
+					</treechildren>
+				</treeitem>
+
+			</treechildren>
+		</tree>
+	</window>
+</zk>
