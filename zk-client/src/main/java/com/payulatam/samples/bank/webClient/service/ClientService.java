@@ -37,8 +37,7 @@ public class ClientService {
 		return result;
 	}
 
-	public List<Client> searchClient(String id, String name, String address, String phoneNumber)
-			throws URISyntaxException {
+	public List<Client> searchClient(String id, String name, String address, String phoneNumber) {
 		RestTemplate restTemplate = new RestTemplate();
 		StringBuilder sb = new StringBuilder();
 		if (id != null && !id.equals("")) {
@@ -64,4 +63,7 @@ public class ClientService {
 		return Arrays.asList(result);
 	}
 
+	public List<Client> getAllClients() throws URISyntaxException {
+		return this.searchClient("", "", "", "");
+	}
 }

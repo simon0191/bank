@@ -1,3 +1,9 @@
 <zk>
-Create Account
+	<window title="Create Account" width="600px"
+		apply="com.payulatam.samples.bank.webClient.view.accounts.CreateAccountView">
+		<div id="createAccountForm">
+			<combobox id="clientsCombo" width="50%"></combobox>
+			<button label="Create Account" id="createAccount"></button>
+		</div>
+	</window>
 </zk>

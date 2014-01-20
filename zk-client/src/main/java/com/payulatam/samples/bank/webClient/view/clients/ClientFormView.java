@@ -52,7 +52,6 @@ public class ClientFormView extends SelectorComposer<Component> {
 		resultsGrid.setRowRenderer(new RowRenderer<Client>() {
 			public void render(final Row row, final Client client, final int index)
 					throws Exception {
-				new Label(String.valueOf(index)).setParent(row);
 				new Label(client.getId()).setParent(row);
 				new Label(client.getName()).setParent(row);
 				new Label(client.getAddress()).setParent(row);
