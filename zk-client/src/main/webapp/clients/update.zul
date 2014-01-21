@@ -7,13 +7,10 @@
 					<include src="/menu.zul" width="100%" />
 					<vbox>
 						<grid id="updateClientForm">
-
 							<rows>
 								<row>
 									<label width="60px" value="Client" />
-									<combobox id="clientsCombo"
-										width="50%">
-									</combobox>
+									<include src="/clients/components/clientsCombo.zul"></include>
 								</row>
 								<row>
 									<label width="60px" value="Name" />
@@ -36,17 +33,6 @@
 										label="submit" />
 								</row>
 							</rows>
-
-						</grid>
-						<grid id="resultsGrid" visible="false">
-							<columns>
-								<column></column>
-								<column>ID</column>
-								<column>Name</column>
-								<column>Address</column>
-								<column>Phone number</column>
-								<column>Options</column>
-							</columns>
 						</grid>
 					</vbox>
 				</hbox>

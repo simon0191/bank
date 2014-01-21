@@ -31,6 +31,7 @@ import com.payulatam.samples.bank.webClient.service.ClientService;
 import com.payulatam.samples.bank.webClient.service.TransactionService;
 import com.payulatam.samples.bank.webClient.utils.FormValidation;
 import com.payulatam.samples.bank.webClient.utils.StringUtils;
+import com.payulatam.samples.bank.webClient.view.utils.ViewUtils;
 
 @VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)
 public class CreateTransactionView extends SelectorComposer<Component> {
@@ -45,7 +46,7 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 	@WireVariable
 	private ClientService clientService;
 
-	@Wire
+	@Wire("include #clientsCombo")
 	private Combobox clientsCombo;
 
 	@Wire
@@ -55,21 +56,17 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 	private Combobox typeCombo;
 
 	@Wire
-	private Grid createTransactionForm;
-
-	@Wire
 	private Doublebox valueBox;
-
 	
+	@Wire
+	private Grid createTransactionForm;
 
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
-		configClientsCombo();
 		configAccountsCombo();
 		populateTransactionTypeCombo();
-
-		populateClientsCombo();
+		ViewUtils.populateClientsCombo(clientsCombo, clientService.getAllClients());
 	}
 
 	@Listen("onChange = #clientsCombo")
@@ -119,18 +116,6 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 
 	}
 
-	private void configClientsCombo() {
-		clientsCombo.setItemRenderer(new ComboitemRenderer<Client>() {
-			@Override
-			public void render(Comboitem item, Client client, int index) throws Exception {
-				String label = StringUtils.concatenate(client.getName(), " - ", client.getId());
-				item.setLabel(label);
-				item.setAttribute("clientId", client.getId());
-			}
-		});
-		clientsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
-	}
-
 	private void populateTransactionTypeCombo() {
 		Comboitem debit = new Comboitem();
 		debit.setLabel("DEBIT");
@@ -142,12 +127,6 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 		credit.setAttribute("type", TransactionType.CREDIT);
 		credit.setParent(typeCombo);
 
-	}
-
-	private void populateClientsCombo() {
-		List<Client> clients = clientService.getAllClients();
-		ListModel<Client> clientListModel = new ListModelList<Client>(clients);
-		clientsCombo.setModel(clientListModel);
 	}
 
 }

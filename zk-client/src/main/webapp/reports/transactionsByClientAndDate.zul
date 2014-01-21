@@ -11,9 +11,7 @@
 							<rows>
 								<row>
 									<label width="60px" value="Client" />
-									<combobox id="clientsCombo"
-										width="50%">
-									</combobox>
+									<include src="/clients/components/clientsCombo.zul"></include>
 								</row>
 								<row>
 									<label value="Start date" />

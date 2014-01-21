@@ -32,16 +32,7 @@
 							</rows>
 
 						</grid>
-						<grid id="resultsGrid" visible="false">
-							<columns>
-								<column></column>
-								<column>ID</column>
-								<column>Name</column>
-								<column>Address</column>
-								<column>Phone number</column>
-								<column>Options</column>
-							</columns>
-						</grid>
+						<include src="/clients/components/clientsGrid.zul"></include>
 					</vbox>
 				</hbox>
 			</panelchildren>

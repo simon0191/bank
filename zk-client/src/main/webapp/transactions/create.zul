@@ -10,7 +10,7 @@
 							<rows>
 								<row>
 									<label width="60px" value="Client" />
-									<combobox id="clientsCombo" constraint=" no empty"></combobox>
+									<include src="/clients/components/clientsCombo.zul"></include>
 								</row>
 								<row>
 									<label width="60px" value="Account" />
@@ -31,15 +31,7 @@
 							</rows>
 
 						</grid>
-
-						<grid id="resultsGrid" visible="false">
-							<columns>
-								<column>Account</column>
-								<column>Type</column>
-								<column>Date</column>
-								<column>Value</column>
-							</columns>
-						</grid>
+						
 					</vbox>
 				</hbox>
 			</panelchildren>
