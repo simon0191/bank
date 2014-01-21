@@ -70,7 +70,7 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 		accountsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
 	}
 
-	@Listen("onChange = #clientsCombo")
+	@Listen("onChange = include #clientsCombo")
 	public void onChangeClientsCombo() {
 		String clientId = (String) clientsCombo.getSelectedItem().getAttribute("clientId");
 		List<Account> accounts = accountService.searchAccountsByClient(clientId);

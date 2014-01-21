@@ -74,14 +74,6 @@
 								</treecell>
 							</treerow>
 						</treeitem>
-						<treeitem>
-							<treerow>
-								<treecell>
-									<button id="searchTransaction"
-										label="Search transactions" />
-								</treecell>
-							</treerow>
-						</treeitem>
 					</treechildren>
 				</treeitem>
 				

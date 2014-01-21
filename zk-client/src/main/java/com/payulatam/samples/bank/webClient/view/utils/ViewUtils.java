@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.zkoss.zk.ui.event.Events;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Grid;
 import org.zkoss.zul.ListModel;
@@ -21,7 +22,6 @@ public final class ViewUtils {
 
 	public static void populateClientsGrid(Grid clientsGrid, List<Client> clients) {
 		ListModelList<Client> clientsModel = new ListModelList<Client>(clients);
-		clientsModel.addToSelection(clientsModel.get(0));
 		clientsGrid.setModel(clientsModel);
 	}
 
@@ -34,7 +34,10 @@ public final class ViewUtils {
 		ListModelList<Client> clientListModel = new ListModelList<Client>(clients);
 		clientListModel.addToSelection(selectedClient);
 		clientsCombo.setModel(clientListModel);
-
+		if(!clientListModel.isEmpty()) {
+			Events.postEvent("onData",clientsCombo,null);	
+		}
+		
 	}
 
 	public static void populateClientsCombo(Combobox clientsCombo, List<Client> clients) {
@@ -43,9 +46,16 @@ public final class ViewUtils {
 
 	public static void populateAccountsCombo(Combobox accountsCombo, List<Account> accounts) {
 		ListModelList<Account> accountListModel = new ListModelList<Account>(accounts);
-		accountListModel.addToSelection(accountListModel.get(0));
+		if(!accountListModel.isEmpty()){
+			accountListModel.addToSelection(accountListModel.get(0));
+		}
 		accountsCombo.setModel(accountListModel);
 
+	}
+
+	public static void populateAccountsGrid(Grid accountsGrid, List<Account> accounts) {
+		ListModelList<Account> accountModel = new ListModelList<Account>(accounts);
+		accountsGrid.setModel(accountModel);
 	}
 
 }

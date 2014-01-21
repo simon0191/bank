@@ -1,6 +1,6 @@
 <zk>
 	<window title="Search Account"
-		apply="com.payulatam.samples.bank.webClient.view.accounts.CreateAccountView">
+		apply="com.payulatam.samples.bank.webClient.view.accounts.SearchAccountView">
 
 		<panel border="center">
 			<panelchildren>
@@ -12,10 +12,6 @@
 								<row>
 									<label width="60px" value="Client" />
 									<include src="/clients/components/clientsCombo.zul"></include>
-								</row>
-								<row>
-									<label width="60px" value="Account" />
-									<include src="/accounts/components/accountsCombo.zul"></include>
 								</row>
 								<row>
 									<button label="Search Account"

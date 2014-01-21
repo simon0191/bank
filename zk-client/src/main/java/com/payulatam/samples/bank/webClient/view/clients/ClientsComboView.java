@@ -6,7 +6,6 @@ import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
-import org.zkoss.zul.SimpleConstraint;
 
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.webClient.utils.StringUtils;
@@ -32,6 +31,5 @@ public class ClientsComboView extends SelectorComposer<Component> {
 				item.setAttribute("clientId", client.getId());
 			}
 		});
-		clientsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
 	}
 }

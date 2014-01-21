@@ -1,1 +1,12 @@
-<zk></zk>
+<zk>
+	<grid id="accountsGrid"
+		apply="com.payulatam.samples.bank.webClient.view.accounts.AccountsGridView">
+		<columns>
+			<column></column>
+			<column>ID</column>
+			<column>Owner</column>
+			<column>Balance</column>
+			<column>Options</column>
+		</columns>
+	</grid>
+</zk>

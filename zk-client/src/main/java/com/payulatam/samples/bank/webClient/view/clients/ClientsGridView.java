@@ -61,7 +61,6 @@ public class ClientsGridView extends SelectorComposer<Component> {
 	
 	private Button createDeleteButton(final Client client,final Row row) {
 		Button result = new Button("Delete");
-		result.setAttribute("clientId", client.getId());
 		result.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 			@Override
 			public void onEvent(MouseEvent ev) throws Exception {
@@ -75,8 +74,7 @@ public class ClientsGridView extends SelectorComposer<Component> {
 	}
 
 	private Button createEditButton(final Client client) {
-		Button result = new Button("Edit");
-		result.setAttribute("clientId", client.getId());
+		Button result = new Button("Edit");		
 		result.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 			@Override
 			public void onEvent(MouseEvent ev) throws Exception {

@@ -33,4 +33,13 @@ public class AccountService {
 		
 	}
 
+	public Account deleteAccount(String accountId) {
+		RestTemplate restTemplate = new RestTemplate();
+
+		Account result = restTemplate.getForObject(StringUtils.concatenate(
+				"http://localhost:8080/rest-api/accounts/delete/", accountId), Account.class);
+
+		return result;
+	}
+
 }
