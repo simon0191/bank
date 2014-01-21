@@ -70,7 +70,6 @@ public class ClientFormView extends SelectorComposer<Component> {
 				editButton.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
-//						Sessions.getCurrent().setAttribute("clientToUpdate", client);
 						Executions.sendRedirect("/clients/update.zul?"+"clientId="+client.getId());
 					}
 				});
@@ -82,9 +81,9 @@ public class ClientFormView extends SelectorComposer<Component> {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
 						Client deleted = clientService.deleteClient(client.getId());
-						
-//						Messagebox.show(StringUtils.concatenate(deleted.toString()," deleted"));
-						Messagebox.show(" deleted");
+						resultsGrid.removeChild(row);
+						row.detach();
+						Messagebox.show(deleted+ " deleted");
 					}
 				});
 				
@@ -101,7 +100,6 @@ public class ClientFormView extends SelectorComposer<Component> {
 
 	protected void populateResultsGrid(List<Client> clients) {
 		ListModelList<Client> clientsModel = new ListModelList<Client>(clients);
-
 		resultsGrid.setModel(clientsModel);
 		resultsGrid.setVisible(true);
 	}

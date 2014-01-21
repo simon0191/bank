@@ -83,15 +83,9 @@ public class ClientService {
 
 	public Client deleteClient(String id) {
 		RestTemplate restTemplate = new RestTemplate();
-		Client result = null;
-		try {
-		result = restTemplate.getForObject(
+		Client result = restTemplate.getForObject(
 				"http://localhost:8080/rest-api/clients/delete/?id=" + id, Client.class);
-		} catch(NoSuchElementException nse) {
-			throw nse;
-		} catch(Exception e) {
-			
-		}
+
 		return result;
 	}
 }

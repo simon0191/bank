@@ -45,6 +45,8 @@ public class ClientController {
 		return result;
 	}
 
+	
+	@ResponseBody
 	@RequestMapping(value = "/delete", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Client delete(@RequestParam(value = "id",required=true) String clientId) {
 		Client result = clientDAO.delete(clientId);
