@@ -22,6 +22,7 @@ public class ReportService {
 		request.setEndDate(endDate);
 		
 		TransactionReportItem[] result = restTemplate.postForObject(url, request, TransactionReportItem[].class);
+		
 		return Arrays.asList(result);
 	}
 	

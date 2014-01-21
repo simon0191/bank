@@ -49,12 +49,11 @@ public class UpdateClientView extends ClientFormView {
 		populateUpdateForm(clientToUpdate);
 	}
 	
-	//TODO: redraw the combobox !?
 	@Listen("onClick = #submitUpdateClient")
 	public void onClickUpdateClient() {
 		Client result = clientService.updateClient((String)clientsCombo.getSelectedItem().getAttribute("clientId"),nameTxt.getText(), addressTxt.getText(),
 				phoneNumberTxt.getText());
-		populateClientsCombo();
+		populateClientsCombo(result);
 		populateUpdateForm(result);
 		Messagebox.show("Client updated");
 	}
@@ -67,22 +66,16 @@ public class UpdateClientView extends ClientFormView {
 
 	private void populateClientsCombo() {
 		List<Client> clients = clientService.getAllClients();
-		ListModel<Client> clientListModel = new ListModelList<Client>(clients);
+		ListModelList<Client> clientListModel = new ListModelList<Client>(clients);
+		clientListModel.addToSelection(clientListModel.get(0));
 		clientsCombo.setModel(clientListModel);
 	}
 
-	//TODO:  clientsCombo.getItems == 0 despues de llenarlo !?
 	private void populateClientsCombo(Client client) {
-		System.out.println("--------- antes: "+clientsCombo.getItems().size());
-		this.populateClientsCombo();
-		System.out.println("--------- despues: "+clientsCombo.getItems().size());
-		for (Comboitem item : clientsCombo.getItems()) {
-			System.out.println("---------- "+item.getAttribute("clientId"));
-			if (item.getAttribute("clientId").equals(client.getId())) {
-				clientsCombo.setSelectedItem(item);
-				break;
-			}
-		}
+		List<Client> clients = clientService.getAllClients();
+		ListModelList<Client> clientListModel = new ListModelList<Client>(clients);
+		clientListModel.addToSelection(client);
+		clientsCombo.setModel(clientListModel);
 	}
 
 	private void configClientsCombo() {

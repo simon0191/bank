@@ -36,7 +36,7 @@ public class TransactionDao implements ITransactionDao {
 	 * , com.payulatam.samples.bank.common.TransactionType,
 	 * java.math.BigDecimal)
 	 */
-	// TODO:
+	// TODO: Agregar manejador de transacciones
 	// @Transactional(propagation=Propagation.REQUIRES_NEW)
 	// http://docs.spring.io/spring/docs/2.0.8/reference/transaction.html
 	@Override
