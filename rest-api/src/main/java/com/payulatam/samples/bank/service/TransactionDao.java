@@ -28,13 +28,21 @@ public class TransactionDao implements ITransactionDao {
 	@Autowired
 	private IAccountDao accountDao;
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#create(java.lang.String, com.payulatam.samples.bank.common.TransactionType, java.math.BigDecimal)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.payulatam.samples.bank.service.ITransactionDao#create(java.lang.String
+	 * , com.payulatam.samples.bank.common.TransactionType,
+	 * java.math.BigDecimal)
 	 */
+	// TODO:
+	// @Transactional(propagation=Propagation.REQUIRES_NEW)
+	// http://docs.spring.io/spring/docs/2.0.8/reference/transaction.html
 	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
-		System.out.println("----------- Type: "+type);
+		System.out.println("----------- Type: " + type);
 		List<String> invalidArguments = new ArrayList<String>();
 		if (value.compareTo(BigDecimal.ZERO) <= 0) {
 			invalidArguments.add("Transaction value should be >= 0");
@@ -57,6 +65,7 @@ public class TransactionDao implements ITransactionDao {
 		result.setAccountId(account.getId());
 		result.setTransactionDate(new Date());
 		result.setValue(value);
+		result.setType(type);
 
 		switch (type) {
 		case CREDIT:
@@ -72,8 +81,12 @@ public class TransactionDao implements ITransactionDao {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByNumber(java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.payulatam.samples.bank.service.ITransactionDao#searchByNumber(java
+	 * .lang.String)
 	 */
 	@Override
 	public Transaction searchByNumber(String id) throws NoSuchElementException {
@@ -84,8 +97,12 @@ public class TransactionDao implements ITransactionDao {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByAccountId(java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.payulatam.samples.bank.service.ITransactionDao#searchByAccountId(
+	 * java.lang.String)
 	 */
 	@Override
 	public List<Transaction> searchByAccountId(String accountId) throws NoSuchElementException {
@@ -99,8 +116,12 @@ public class TransactionDao implements ITransactionDao {
 		return Arrays.asList(result);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByClientId(java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.payulatam.samples.bank.service.ITransactionDao#searchByClientId(java
+	 * .lang.String)
 	 */
 	@Override
 	public List<Transaction> searchByClientId(String ownerId) throws NoSuchElementException {
@@ -112,8 +133,12 @@ public class TransactionDao implements ITransactionDao {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByDateBetweenAndAccount(java.util.Date, java.util.Date, java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#
+	 * searchByDateBetweenAndAccount(java.util.Date, java.util.Date,
+	 * java.lang.String)
 	 */
 	@Override
 	public List<Transaction> searchByDateBetweenAndAccount(Date startDate, Date endDate,
@@ -122,28 +147,34 @@ public class TransactionDao implements ITransactionDao {
 		if (account == null) {
 			throw new NoSuchElementException("Non existent account");
 		}
-		if(endDate.before(startDate)) {
+		if (endDate.before(startDate)) {
 			throw new IllegalArgumentException("startDate should be before endDate");
 		}
 		ISpaceQuery<Transaction> query = new SQLQuery<Transaction>(Transaction.class,
-				"transactionDate >= ? AND transactionDate <= ? AND accountId = ?", startDate, endDate, accountId);
+				"transactionDate >= ? AND transactionDate <= ? AND accountId = ?", startDate,
+				endDate, accountId);
+		System.out.println("---------- " + query.toString());
 		Transaction[] result = gigaSpace.readMultiple(query);
-		System.out.println("----------- "+Arrays.asList(result));
+		System.out.println("----------- " + Arrays.asList(result));
 		return Arrays.asList(result);
 	}
 
-	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.ITransactionDao#searchByDateBetweenAndClient(java.util.Date, java.util.Date, java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.payulatam.samples.bank.service.ITransactionDao#
+	 * searchByDateBetweenAndClient(java.util.Date, java.util.Date,
+	 * java.lang.String)
 	 */
 	@Override
 	public List<Transaction> searchByDateBetweenAndClient(Date startDate, Date endDate,
 			String ownerId) throws NoSuchElementException {
-		if(endDate.before(startDate)) {
+		if (endDate.before(startDate)) {
 			throw new IllegalArgumentException("startDate should be before endDate");
 		}
 		List<Account> accounts = accountDao.searchAccountsByClientId(ownerId);
 		List<Transaction> result = new ArrayList<Transaction>();
-		for(Account a:accounts) {
+		for (Account a : accounts) {
 			result.addAll(this.searchByDateBetweenAndAccount(startDate, endDate, a.getId()));
 		}
 		return result;

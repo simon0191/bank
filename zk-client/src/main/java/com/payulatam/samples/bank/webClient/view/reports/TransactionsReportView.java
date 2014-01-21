@@ -70,11 +70,12 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 		} else {
 			String clientId = (String) clientsCombo.getSelectedItem().getAttribute("clientId");
 			List<TransactionReportItem> result = reportService.createReport(clientId,startDate.getValue(),endDate.getValue());
+			System.out.println("----------* "+result);
 			populateResultsGrid(result);
 		}
 	}
 	private void populateResultsGrid(List<TransactionReportItem> items) {
-		List<TransactionReportItem> itemsList = new ArrayList<TransactionReportItem>();
+		List<TransactionReportItem> itemsList = new ArrayList<TransactionReportItem>(items);
 		ListModelList<TransactionReportItem> reportModel = new ListModelList<TransactionReportItem>(itemsList);
 
 		resultsGrid.setModel(reportModel);

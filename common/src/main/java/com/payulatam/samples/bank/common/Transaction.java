@@ -53,7 +53,7 @@ public class Transaction {
 	@Override
 	public String toString() {
 		return "Transaction [type=" + type + ", value=" + value + ", date="
-				+ transactionDate + "]";
+				+ transactionDate + ", accountId="+accountId+"]";
 	}
 
 	public String getAccountId() {

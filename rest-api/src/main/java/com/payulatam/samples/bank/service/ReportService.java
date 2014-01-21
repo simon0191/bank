@@ -31,6 +31,7 @@ public class ReportService {
 			throw new NoSuchElementException("Client "+request.getClientId()+" not found");
 		}
 		List<Transaction> ts = transactionDao.searchByDateBetweenAndClient(request.getStartDate(), request.getEndDate(), request.getClientId());
+		System.out.println("------------ "+ ts);
 		Map<String,TransactionReportItem> map = new HashMap<String,TransactionReportItem>();
 		
 		for(Transaction t:ts) {
@@ -53,6 +54,7 @@ public class ReportService {
 		for(String accountId:map.keySet()) {
 			result.add(map.get(accountId));
 		}
+		System.out.println("------------ "+ result);
 		return result;
 	}
 
