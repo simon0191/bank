@@ -4,24 +4,18 @@ import java.util.List;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
-import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.VariableResolver;
 import org.zkoss.zk.ui.select.annotation.Wire;
 import org.zkoss.zk.ui.select.annotation.WireVariable;
 import org.zkoss.zul.Combobox;
-import org.zkoss.zul.Comboitem;
-import org.zkoss.zul.ComboitemRenderer;
 import org.zkoss.zul.Grid;
-import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Messagebox;
-import org.zkoss.zul.SimpleConstraint;
 import org.zkoss.zul.Textbox;
 
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.webClient.service.ClientService;
-import com.payulatam.samples.bank.webClient.utils.StringUtils;
 import com.payulatam.samples.bank.webClient.view.utils.ViewUtils;
 
 @VariableResolver(org.zkoss.zkplus.spring.DelegatingVariableResolver.class)

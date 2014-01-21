@@ -28,7 +28,7 @@ public class SearchAccountView extends SelectorComposer<Component> {
 	@Wire("include #clientsCombo")
 	private Combobox clientsCombo;
 
-	@Wire
+	@Wire("inclide #accountsCombo")
 	private Combobox accountsCombo;
 
 	@Wire

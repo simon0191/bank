@@ -11,11 +11,11 @@
 							<rows>
 								<row>
 									<label width="60px" value="Client" />
-									<combobox id="clientsCombo"></combobox>
+									<include src="/clients/components/clientsCombo.zul"></include>
 								</row>
 								<row>
 									<label width="60px" value="Account" />
-									<combobox id="accountsCombo"></combobox>
+									<include src="/accounts/components/accountsCombo.zul"></include>
 								</row>
 								<row>
 									<button label="Search Account"
@@ -25,14 +25,7 @@
 							</rows>
 						</grid>
 						
-						<grid id="resultsGrid" visible="false">
-							<columns>
-								<column></column>
-								<column>Number</column>
-								<column>Owner</column>
-								<column>Balance</column>
-							</columns>
-						</grid>
+						<include src="/accounts/components/accountsGrid.zul"></include>
 						
 					</vbox>
 				</hbox>

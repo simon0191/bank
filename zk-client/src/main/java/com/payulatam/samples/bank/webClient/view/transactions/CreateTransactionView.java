@@ -49,7 +49,7 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 	@Wire("include #clientsCombo")
 	private Combobox clientsCombo;
 
-	@Wire
+	@Wire("include #accountsCombo")
 	private Combobox accountsCombo;
 
 	@Wire
@@ -64,16 +64,17 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 	@Override
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
-		configAccountsCombo();
+		
 		populateTransactionTypeCombo();
 		ViewUtils.populateClientsCombo(clientsCombo, clientService.getAllClients());
+		accountsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
 	}
 
 	@Listen("onChange = #clientsCombo")
 	public void onChangeClientsCombo() {
 		String clientId = (String) clientsCombo.getSelectedItem().getAttribute("clientId");
 		List<Account> accounts = accountService.searchAccountsByClient(clientId);
-		populateAccountsCombo(accounts);
+		ViewUtils.populateAccountsCombo(accountsCombo,accounts);
 	}
 
 	@Listen("onClick = #submitCreateTransaction")
@@ -92,28 +93,6 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 			}
 			
 		}
-	}
-
-	private void populateAccountsCombo(List<Account> accounts) {
-		ListModel<Account> accountListModel = new ListModelList<Account>(accounts);
-		accountsCombo.setModel(accountListModel);
-	}
-
-	private void configAccountsCombo() {
-		accountsCombo.setItemRenderer(new ComboitemRenderer<Account>() {
-			@Override
-			public void render(Comboitem item, Account account, int index) throws Exception {
-				NumberFormat usdCostFormat = NumberFormat.getCurrencyInstance(Locale.US);
-				usdCostFormat.setMinimumFractionDigits(1);
-				usdCostFormat.setMaximumFractionDigits(2);
-
-				item.setLabel(account.getId());
-				item.setDescription(usdCostFormat.format(account.getBalance().doubleValue()));
-				item.setAttribute("accountId", account.getId());
-			}
-		});
-		clientsCombo.setConstraint(new SimpleConstraint(SimpleConstraint.NO_EMPTY));
-
 	}
 
 	private void populateTransactionTypeCombo() {
