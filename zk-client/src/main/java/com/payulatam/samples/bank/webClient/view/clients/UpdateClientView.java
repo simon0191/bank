@@ -3,6 +3,7 @@ package com.payulatam.samples.bank.webClient.view.clients;
 import java.util.List;
 
 import org.zkoss.zk.ui.Component;
+import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.Sessions;
 import org.zkoss.zk.ui.select.annotation.Listen;
 import org.zkoss.zk.ui.select.annotation.VariableResolver;
@@ -11,7 +12,6 @@ import org.zkoss.zul.Combobox;
 import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
 import org.zkoss.zul.Grid;
-import org.zkoss.zul.ListModel;
 import org.zkoss.zul.ListModelList;
 import org.zkoss.zul.Messagebox;
 import org.zkoss.zul.SimpleConstraint;
@@ -32,9 +32,9 @@ public class UpdateClientView extends ClientFormView {
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
 		configClientsCombo();
-		
-		Client clientToUpdate = (Client) Sessions.getCurrent().getAttribute("clientToUpdate");
-		if (clientToUpdate != null) {
+		String clientId = Executions.getCurrent().getParameter("clientId");
+		if (clientId != null) {
+			Client clientToUpdate = (Client) super.clientService.searchClientById(clientId);
 			populateClientsCombo(clientToUpdate);
 			populateUpdateForm(clientToUpdate);
 		} else {

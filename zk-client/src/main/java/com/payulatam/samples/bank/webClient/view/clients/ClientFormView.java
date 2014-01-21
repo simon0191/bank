@@ -70,8 +70,8 @@ public class ClientFormView extends SelectorComposer<Component> {
 				editButton.addEventListener(Events.ON_CLICK, new EventListener<MouseEvent>() {
 					@Override
 					public void onEvent(MouseEvent ev) throws Exception {
-						Sessions.getCurrent().setAttribute("clientToUpdate", client);
-						Executions.sendRedirect("/clients/update.zul");
+//						Sessions.getCurrent().setAttribute("clientToUpdate", client);
+						Executions.sendRedirect("/clients/update.zul?"+"clientId="+client.getId());
 					}
 				});
 				
