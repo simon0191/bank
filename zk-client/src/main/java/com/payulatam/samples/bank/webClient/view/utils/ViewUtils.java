@@ -49,8 +49,10 @@ public final class ViewUtils {
 		if(!accountListModel.isEmpty()){
 			accountListModel.addToSelection(accountListModel.get(0));
 		}
+		else {
+			accountsCombo.setRawValue("");
+		}
 		accountsCombo.setModel(accountListModel);
-
 	}
 
 	public static void populateAccountsGrid(Grid accountsGrid, List<Account> accounts) {

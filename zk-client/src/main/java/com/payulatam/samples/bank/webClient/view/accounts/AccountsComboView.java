@@ -26,6 +26,7 @@ public class AccountsComboView extends SelectorComposer<Component> {
 		this.configAccountsCombo();
 	}
 	private void configAccountsCombo() {
+		accountsCombo.setReadonly(true);
 		accountsCombo.setItemRenderer(new ComboitemRenderer<Account>() {
 			@Override
 			public void render(Comboitem item, Account account, int index) throws Exception {
