@@ -18,7 +18,7 @@ import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.service.IAccountService;
-import com.payulatam.samples.bank.service.Utils;
+import com.payulatam.samples.bank.utils.Utils;
 
 @Service
 public class AccountService implements IAccountService {
@@ -26,9 +26,6 @@ public class AccountService implements IAccountService {
 	//@GigaSpaceContext
 	@Autowired
 	private GigaSpace gigaSpace;
-
-	@Autowired
-	private Utils utils;
 
 	/* (non-Javadoc)
 	 * @see com.payulatam.samples.bank.service.IAccountService#create(java.lang.String)

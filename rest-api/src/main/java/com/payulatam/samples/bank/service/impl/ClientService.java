@@ -17,7 +17,7 @@ import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.service.IAccountService;
 import com.payulatam.samples.bank.service.IClientService;
-import com.payulatam.samples.bank.service.Utils;
+import com.payulatam.samples.bank.utils.Utils;
 
 @Service
 public class ClientService implements IClientService {
@@ -25,9 +25,6 @@ public class ClientService implements IClientService {
 	//@GigaSpaceContext
 	@Autowired
 	private GigaSpace gigaSpace;
-
-	@Autowired
-	private Utils utils;
 	
 	@Autowired
 	private IAccountService accountService;
@@ -129,15 +126,15 @@ public class ClientService implements IClientService {
 	private void validate(String name, String address, String telephone) {
 		List<String> invalidFields = new ArrayList<String>();
 		boolean hasInvalidFields = false;
-		if (telephone!= null && !utils.validateTelephone(telephone)) {
+		if (telephone!= null && !Utils.validateTelephone(telephone)) {
 			hasInvalidFields = true;
 			invalidFields.add("telephone");
 		}
-		if (address != null && !utils.validateAddress(address)) {
+		if (address != null && !Utils.validateAddress(address)) {
 			hasInvalidFields = true;
 			invalidFields.add("address");
 		}
-		if (name != null && !utils.validateName(name)) {
+		if (name != null && !Utils.validateName(name)) {
 			hasInvalidFields = true;
 			invalidFields.add("name");
 		}
