@@ -14,18 +14,6 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 	</bean>
 
-	<!-- A bean that starts up HSQL as a server. Allows to connect to it from 
-		within this context as well as connecting to it remotely. -->
-	<!-- <bean id="hsqldbServer" class="org.openspaces.persistency.utils.HsqlServerBean"> -->
-	<!-- <property name="dataSource"><ref local="dataSource"/></property> -->
-	<!-- <property name="serverProperties"> -->
-	<!-- <props> -->
-	<!-- <prop key="server.database.0">D:\\simon.soriano/bank2-testDB</prop> -->
-	<!-- <prop key="server.dbname.0">testDB</prop> -->
-	<!-- </props> -->
-	<!-- </property> -->
-	<!-- </bean> -->
-
 	<!-- A JDBC datasource pool that connects to HSQL. -->
 	<!-- A JDBC pooled data source that connects to the HSQL server the mirror 
 		starts. -->
@@ -69,10 +57,24 @@
 	<!-- The mirror space. Uses the Hibernate external data source. Persists 
 		changes done on the Space that connects to this mirror space into the database 
 		using Hibernate. -->
+
+
 	<os-core:mirror id="mirror" url="/./mirror-service"
-		external-data-source="hibernateDataSource">
+		external-data-source="hibernateDataSource" operation-grouping="group-by-replication-bulk">
 		<os-core:source-space name="space" partitions="2"
 			backups="1" />
 	</os-core:mirror>
+
+	<!-- <os-core:space id="mirror" url="/./mirror-service" -->
+	<!-- schema="mirror" external-data-source="hibernateDataSource"> -->
+	<!-- <os-core:properties> -->
+	<!-- <props> -->
+	<!-- <prop key="space-config.mirror-service.cluster.name">space</prop> -->
+	<!-- <prop key="space-config.mirror-service.cluster.partitions">2</prop> -->
+	<!-- <prop key="space-config.mirror-service.cluster.backups-per-partition">1</prop> -->
+	<!-- <prop key="space-config.mirror-service.operation-grouping">group-by-replication-bulk</prop> -->
+	<!-- </props> -->
+	<!-- </os-core:properties> -->
+	<!-- </os-core:space> -->
 
 </beans>

@@ -64,14 +64,10 @@
 			<props>
 				<!-- Use ALL IN CACHE -->
 				<prop key="space-config.engine.cache_policy">1</prop>
-				<prop key="space-config.external-data-source.usage">read-only</prop>
+<!-- 				<prop key="space-config.external-data-source.usage">read-only</prop> -->
 				<prop key="cluster-config.cache-loader.external-data-source">true</prop>
 				<prop key="cluster-config.cache-loader.central-data-source">true</prop>
-
-				<!-- /./mirror-service -->
-				<prop key="cluster-config.mirror-service.url">
-					jini://*/mirror-service?locators=192.168.4.160:7102
-				</prop>
+				<prop key="cluster-config.mirror-service.url">jini://*/*/mirror-service?locators=192.168.4.160:7102</prop>
 				<prop key="cluster-config.mirror-service.bulk-size">100</prop>
 				<prop key="cluster-config.mirror-service.interval-millis">2000</prop>
 				<prop key="cluster-config.mirror-service.interval-opers">100</prop>
