@@ -44,14 +44,23 @@ public class ClientService {
 			sb.append(id);
 		}
 		if (name != null && !name.equals("")) {
+			if(sb.length() > 0) {
+				sb.append("&");
+			}
 			sb.append("name=");
 			sb.append(name);
 		}
 		if (address != null && !address.equals("")) {
+			if(sb.length() > 0) {
+				sb.append("&");
+			}
 			sb.append("address=");
 			sb.append(address);
 		}
 		if (phoneNumber != null && !phoneNumber.equals("")) {
+			if(sb.length() > 0) {
+				sb.append("&");
+			}
 			sb.append("telephone=");
 			sb.append(phoneNumber);
 		}
