@@ -23,7 +23,7 @@ public class ReportService {
 	private GigaSpace gigaSpace;
 	
 	@Autowired
-	private TransactionDao transactionDao;
+	private ITransactionDao transactionDao;
 
 	public List<TransactionReportItem> generateReport(TransactionReportRequest request) {
 		Client client = gigaSpace.readById(Client.class,request.getClientId());

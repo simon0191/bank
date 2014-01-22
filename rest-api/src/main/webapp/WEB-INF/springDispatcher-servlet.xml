@@ -3,6 +3,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:os-core="http://www.openspaces.org/schema/core"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
    http://www.springframework.org/schema/context
@@ -10,7 +11,8 @@
    http://www.springframework.org/schema/mvc
    http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
    http://www.openspaces.org/schema/core 
-    http://www.openspaces.org/schema/core/openspaces-core.xsd">
+    http://www.openspaces.org/schema/core/openspaces-core.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 
 	<!-- Will look for all the controllers with annotations like @Controller, 
 		@Request, etc -->
@@ -20,12 +22,16 @@
 	<context:component-scan base-package="com.payulatam.samples.bank.service" />
 	<mvc:annotation-driven />
 
+	<!-- Transaction Manager -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<!-- <os-core:giga-space-context /> -->
 	<os-core:space id="space"
 		url="jini://*/*/space?locators=192.168.4.160:7102" />
-	<os-core:giga-space id="gigaSpace" space="space" />
+	<os-core:distributed-tx-manager id="transactionManager" />
+	<os-core:giga-space id="gigaSpace" space="space" tx-manager="transactionManager" />
 
-	
+
+
 
 </beans>

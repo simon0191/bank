@@ -10,6 +10,8 @@ import java.util.NoSuchElementException;
 import org.openspaces.core.GigaSpace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.gigaspaces.client.WriteModifiers;
 import com.gigaspaces.query.ISpaceQuery;
@@ -37,8 +39,8 @@ public class TransactionDao implements ITransactionDao {
 	 * java.math.BigDecimal)
 	 */
 	// TODO: Agregar manejador de transacciones
-	// @Transactional(propagation=Propagation.REQUIRES_NEW)
 	// http://docs.spring.io/spring/docs/2.0.8/reference/transaction.html
+	@Transactional(propagation=Propagation.MANDATORY)
 	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
