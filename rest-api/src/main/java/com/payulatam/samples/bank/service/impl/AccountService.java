@@ -17,11 +17,11 @@ import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
-import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.IAccountService;
 import com.payulatam.samples.bank.service.Utils;
 
 @Service
-public class AccountDao implements IAccountDao {
+public class AccountService implements IAccountService {
 
 	//@GigaSpaceContext
 	@Autowired
@@ -31,7 +31,7 @@ public class AccountDao implements IAccountDao {
 	private Utils utils;
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IAccountDao#create(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IAccountService#create(java.lang.String)
 	 */
 	@Override
 	public Account create(String clientId) throws NoSuchElementException {
@@ -49,7 +49,7 @@ public class AccountDao implements IAccountDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IAccountDao#delete(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IAccountService#delete(java.lang.String)
 	 */
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
@@ -66,7 +66,7 @@ public class AccountDao implements IAccountDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IAccountDao#searchById(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IAccountService#searchById(java.lang.String)
 	 */
 	@Override
 	public Account searchById(String id) throws NoSuchElementException {
@@ -78,7 +78,7 @@ public class AccountDao implements IAccountDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IAccountDao#searchAccountsByClientId(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IAccountService#searchAccountsByClientId(java.lang.String)
 	 */
 	@Override
 	public List<Account> searchAccountsByClientId(String clientId) {

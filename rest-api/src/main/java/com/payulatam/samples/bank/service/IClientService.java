@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 import com.payulatam.samples.bank.common.Client;
 
-public interface IClientDao {
+public interface IClientService {
 
 	Client create(String name, String address, String telephone);
 

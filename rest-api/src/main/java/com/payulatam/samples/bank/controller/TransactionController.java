@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.payulatam.samples.bank.common.Transaction;
-import com.payulatam.samples.bank.service.ITransactionDao;
+import com.payulatam.samples.bank.service.ITransactionService;
 
 @Controller
 @RequestMapping(value = "/transactions")
 public class TransactionController {
 
 	@Autowired
-	ITransactionDao transactionDao;
+	ITransactionService transactionService;
 	
 	@ResponseBody
 	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public Transaction create(@RequestBody Transaction t) {
-		Transaction result = transactionDao.create(t.getAccountId(),
+		Transaction result = transactionService.create(t.getAccountId(),
 				t.getType(), t.getValue());
 		return result;
 	}
@@ -39,14 +39,14 @@ public class TransactionController {
 	@ResponseBody
 	@RequestMapping(value = "/{transactionNumber}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Transaction searchById(@PathVariable String transactionNumber) {
-		Transaction result = transactionDao.searchByNumber(transactionNumber);
+		Transaction result = transactionService.searchByNumber(transactionNumber);
 		return result;
 	}
 
 	@ResponseBody
 	@RequestMapping(value = "/searchByClient/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Transaction> searchByClientId(@PathVariable String id) {
-		List<Transaction> result = transactionDao.searchByClientId(id);
+		List<Transaction> result = transactionService.searchByClientId(id);
 		return result;
 	}
 	

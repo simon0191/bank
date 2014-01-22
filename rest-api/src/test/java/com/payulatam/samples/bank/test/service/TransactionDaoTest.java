@@ -25,13 +25,13 @@ import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
-import com.payulatam.samples.bank.service.ITransactionDao;
+import com.payulatam.samples.bank.service.ITransactionService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 	@Autowired
-	private ITransactionDao transactionDao;
+	private ITransactionService transactionService;
 
 	@Autowired
 	private GigaSpace gigaSpace;
@@ -59,7 +59,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 				.andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		Transaction result = transactionDao.create("accountId", TransactionType.DEBIT, value);
+		Transaction result = transactionService.create("accountId", TransactionType.DEBIT, value);
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(account.getBalance(), expectedBalance);
@@ -85,7 +85,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 				.andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		Transaction result = transactionDao.create("accountId", TransactionType.CREDIT, value);
+		Transaction result = transactionService.create("accountId", TransactionType.CREDIT, value);
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(account.getBalance(), expectedBalance);
@@ -104,7 +104,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 
-		Transaction result = transactionDao.create("accountId", TransactionType.CREDIT, value);
+		Transaction result = transactionService.create("accountId", TransactionType.CREDIT, value);
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(account.getBalance(), expectedBalance);
@@ -120,7 +120,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		account.setId("accountId");
 		account.setBalance(expectedBalance);
 
-		Transaction result = transactionDao.create("accountId", TransactionType.CREDIT, value);
+		Transaction result = transactionService.create("accountId", TransactionType.CREDIT, value);
 
 		Assert.assertEquals(account.getBalance(), expectedBalance);
 		Assert.assertEquals(result.getAccountId(), null);
@@ -135,7 +135,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		account.setId("accountId");
 		account.setBalance(expectedBalance);
 
-		Transaction result = transactionDao.create("accountId", null, value);
+		Transaction result = transactionService.create("accountId", null, value);
 
 		Assert.assertEquals(account.getBalance(), expectedBalance);
 		Assert.assertEquals(result.getAccountId(), null);
@@ -149,7 +149,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Transaction.class, expected.getId()))
 				.andReturn(expected);
 		EasyMock.replay(gigaSpace);
-		Transaction result = transactionDao.searchByNumber(expected.getId());
+		Transaction result = transactionService.searchByNumber(expected.getId());
 		EasyMock.verify(gigaSpace);
 		Assert.assertEquals(result, expected);
 
@@ -162,7 +162,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 
 		EasyMock.expect(gigaSpace.readById(Transaction.class, expected.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
-		Transaction result = transactionDao.searchByNumber(expected.getId());
+		Transaction result = transactionService.searchByNumber(expected.getId());
 		EasyMock.verify(gigaSpace);
 	}
 
@@ -180,7 +180,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readMultiple(EasyMock.isA(ISpaceQuery.class))).andReturn(trans);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByAccountId(account.getId());
+		List<Transaction> result = transactionService.searchByAccountId(account.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result.size(), trans.length);
@@ -194,7 +194,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		transactionDao.searchByAccountId(account.getId());
+		transactionService.searchByAccountId(account.getId());
 		EasyMock.verify(gigaSpace);
 	}
 
@@ -222,8 +222,8 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 				.andReturn(transactions).anyTimes();
 
 		EasyMock.replay(gigaSpace);
-		Assert.assertNotNull(transactionDao, "TransactionDao is null");
-		List<Transaction> result = transactionDao.searchByClientId(owner.getId());
+		Assert.assertNotNull(transactionService, "TransactionService is null");
+		List<Transaction> result = transactionService.searchByClientId(owner.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result.size(), transactions.length * accounts.length);
@@ -238,7 +238,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Client.class, owner.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		transactionDao.searchByClientId(owner.getId());
+		transactionService.searchByClientId(owner.getId());
 		EasyMock.verify(gigaSpace);
 
 	}
@@ -257,7 +257,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 				transactions);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndAccount(startDate, endDate,
 				account.getId());
 		EasyMock.verify(gigaSpace);
 
@@ -276,7 +276,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndAccount(startDate, endDate,
 				account.getId());
 		EasyMock.verify(gigaSpace);
 	}
@@ -293,7 +293,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndAccount(startDate, endDate,
 				account.getId());
 		EasyMock.verify(gigaSpace);
 	}
@@ -312,7 +312,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 				transactions);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndAccount(startDate, endDate,
 				account.getId());
 		EasyMock.verify(gigaSpace);
 
@@ -347,7 +347,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndClient(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndClient(startDate, endDate,
 				owner.getId());
 		EasyMock.verify(gigaSpace);
 		Assert.assertEquals(result.size(), transactions.length * accounts.length);
@@ -365,7 +365,7 @@ public class TransactionDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 
-		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate,
+		List<Transaction> result = transactionService.searchByDateBetweenAndAccount(startDate, endDate,
 				account.getId());
 		EasyMock.verify(gigaSpace);
 	}

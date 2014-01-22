@@ -22,7 +22,7 @@ import org.testng.annotations.Test;
 
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.controller.ClientController;
-import com.payulatam.samples.bank.service.IClientDao;
+import com.payulatam.samples.bank.service.IClientService;
 
 public class ClientControllerTest {
 
@@ -32,7 +32,7 @@ public class ClientControllerTest {
 	ClientController clientController;
 
 	@Mock
-	IClientDao clientDao;
+	IClientService clientService;
 
 	@BeforeClass
 	public void setup() {
@@ -52,7 +52,7 @@ public class ClientControllerTest {
 //				"{ \"name\": \"%s\", \"address\": \"%s\", \"telephone\": \"%s\"}",
 //				client.getName(), client.getAddress(), client.getTelephone());
 //
-//		when(clientDao.create(any(String.class), any(String.class), any(String.class))).thenReturn(
+//		when(clientService.create(any(String.class), any(String.class), any(String.class))).thenReturn(
 //				client);
 //
 //		this.mockMvc
@@ -61,7 +61,7 @@ public class ClientControllerTest {
 //								.accept(MediaType.APPLICATION_JSON)).andDo(print())
 //				.andExpect(status().isCreated());
 //
-//		verify(clientDao).create(eq(client.getName()), eq(client.getAddress()),
+//		verify(clientService).create(eq(client.getName()), eq(client.getAddress()),
 //				eq(client.getTelephone()));
 
 	}

@@ -20,14 +20,14 @@ import com.gigaspaces.client.WriteModifiers;
 import com.gigaspaces.query.ISpaceQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.IAccountService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
 public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
-	private IAccountDao accountDao;
+	private IAccountService accountService;
 
 	@Autowired
 	private GigaSpace gigaSpace;
@@ -48,7 +48,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 				.andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		Account result = accountDao.create(owner.getId());
+		Account result = accountService.create(owner.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result.getClientId(), owner.getId(), "Client id mismatch");
@@ -64,7 +64,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Client.class, owner.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		accountDao.create(owner.getId());
+		accountService.create(owner.getId());
 		EasyMock.verify(gigaSpace);
 	}
 	
@@ -77,7 +77,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.takeById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 
-		Account result = accountDao.delete(account.getId());
+		Account result = accountService.delete(account.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result.getId(),account.getId(), "Account id mismatch");
@@ -91,7 +91,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.takeById(Account.class, account.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		accountDao.delete(account.getId());
+		accountService.delete(account.getId());
 		EasyMock.verify(gigaSpace);
 	}
 	@Test
@@ -105,7 +105,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 
-		Account result = accountDao.searchById(account.getId());
+		Account result = accountService.searchById(account.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result,account, "Account mismatch");
@@ -121,7 +121,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		accountDao.searchById(account.getId());
+		accountService.searchById(account.getId());
 		EasyMock.verify(gigaSpace);
 	}
 	
@@ -136,7 +136,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readMultiple(EasyMock.isA(ISpaceQuery.class))).andReturn(accounts);
 		EasyMock.replay(gigaSpace);
 
-		List<Account> result = accountDao.searchAccountsByClientId(owner.getId());
+		List<Account> result = accountService.searchAccountsByClientId(owner.getId());
 		EasyMock.verify(gigaSpace);
 
 		Assert.assertEquals(result.size(), accounts.length);
@@ -150,7 +150,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		EasyMock.expect(gigaSpace.readById(Client.class,owner.getId())).andReturn(null);
 		EasyMock.replay(gigaSpace);
 
-		List<Account> result = accountDao.searchAccountsByClientId(owner.getId());
+		List<Account> result = accountService.searchAccountsByClientId(owner.getId());
 		EasyMock.verify(gigaSpace);
 		
 	}

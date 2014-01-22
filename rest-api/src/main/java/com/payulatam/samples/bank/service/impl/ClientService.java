@@ -15,12 +15,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.IAccountDao;
-import com.payulatam.samples.bank.service.IClientDao;
+import com.payulatam.samples.bank.service.IAccountService;
+import com.payulatam.samples.bank.service.IClientService;
 import com.payulatam.samples.bank.service.Utils;
 
 @Service
-public class ClientDao implements IClientDao {
+public class ClientService implements IClientService {
 
 	//@GigaSpaceContext
 	@Autowired
@@ -30,10 +30,10 @@ public class ClientDao implements IClientDao {
 	private Utils utils;
 	
 	@Autowired
-	private IAccountDao accountDao;
+	private IAccountService accountService;
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IClientDao#create(java.lang.String, java.lang.String, java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IClientService#create(java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public Client create(String name, String address, String telephone) {
@@ -50,7 +50,7 @@ public class ClientDao implements IClientDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IClientDao#update(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IClientService#update(java.lang.String, java.lang.String, java.lang.String, java.lang.String)
 	 */
 	@Override
 	public Client update(String id, String name, String address, String telephone) {
@@ -73,7 +73,7 @@ public class ClientDao implements IClientDao {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IClientDao#delete(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IClientService#delete(java.lang.String)
 	 */
 	@Override
 	@Transactional(propagation=Propagation.REQUIRED)
@@ -86,14 +86,14 @@ public class ClientDao implements IClientDao {
 		template.setClientId(result.getId());
 		Account[] accounts = gigaSpace.readMultiple(template);
 		for(Account a:accounts) {
-			accountDao.delete(a.getId());
+			accountService.delete(a.getId());
 		}
 		result = gigaSpace.takeById(Client.class, id);
 		return result;
 	}
 
 	/* (non-Javadoc)
-	 * @see com.payulatam.samples.bank.service.IClientDao#searchById(java.lang.String)
+	 * @see com.payulatam.samples.bank.service.IClientService#searchById(java.lang.String)
 	 */
 	@Override
 	public Client searchById(String id) {

@@ -15,8 +15,8 @@ import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.reports.TransactionReportItem;
 import com.payulatam.samples.bank.common.reports.TransactionReportRequest;
-import com.payulatam.samples.bank.service.IAccountDao;
-import com.payulatam.samples.bank.service.ITransactionDao;
+import com.payulatam.samples.bank.service.IAccountService;
+import com.payulatam.samples.bank.service.ITransactionService;
 
 @Service
 
@@ -26,23 +26,23 @@ public class ReportService {
 	private GigaSpace gigaSpace;
 	
 	@Autowired
-	private IAccountDao accountDao;
+	private IAccountService accountService;
 	
 	@Autowired
-	private ITransactionDao transactionDao;
+	private ITransactionService transactionService;
 
 	public List<TransactionReportItem> generateReport(TransactionReportRequest request) {
 		Client client = gigaSpace.readById(Client.class,request.getClientId());
 		if(client == null) {
 			throw new NoSuchElementException("Client "+request.getClientId()+" not found");
 		}
-		List<Transaction> ts = transactionDao.searchByDateBetweenAndClient(request.getStartDate(), request.getEndDate(), request.getClientId());
+		List<Transaction> ts = transactionService.searchByDateBetweenAndClient(request.getStartDate(), request.getEndDate(), request.getClientId());
 		Map<String,TransactionReportItem> map = new HashMap<String,TransactionReportItem>();
 		
 		for(Transaction t:ts) {
 			if(!map.containsKey(t.getAccountId())) {
 				TransactionReportItem item = new TransactionReportItem(t.getAccountId());
-				Account account = accountDao.searchById(t.getAccountId());
+				Account account = accountService.searchById(t.getAccountId());
 				item.setBalance(account.getBalance());
 				map.put(t.getAccountId(), item);
 			}

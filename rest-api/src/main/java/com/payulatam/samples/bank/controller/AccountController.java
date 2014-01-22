@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.payulatam.samples.bank.common.Account;
-import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.IAccountService;
 
 
 @Controller
@@ -21,34 +21,34 @@ import com.payulatam.samples.bank.service.IAccountDao;
 public class AccountController {
 	
 	@Autowired
-	IAccountDao accountDao;
+	IAccountService accountService;
 
 	@ResponseBody
 	@RequestMapping(value = "/create/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(value = HttpStatus.CREATED)
 	public Account create(@PathVariable(value="id") String clientId) {
-		Account result = accountDao.create(clientId);
+		Account result = accountService.create(clientId);
 		return result;
 	}
 	
 	@ResponseBody
 	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Account delete(@PathVariable(value="id") String accountId) {
-		Account result = accountDao.delete(accountId);
+		Account result = accountService.delete(accountId);
 		return result;
 	}	
 	
 	@ResponseBody
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Account searchById(@PathVariable(value="id") String accountId) {
-		Account result = accountDao.searchById(accountId);
+		Account result = accountService.searchById(accountId);
 		return result;
 	}	
 	
 	@ResponseBody
 	@RequestMapping(value = "/searchByClient/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Account> searchByClientId(@PathVariable(value="id") String clientId) {
-		List<Account> result = accountDao.searchAccountsByClientId(clientId);
+		List<Account> result = accountService.searchAccountsByClientId(clientId);
 		return result;
 	}	
 	

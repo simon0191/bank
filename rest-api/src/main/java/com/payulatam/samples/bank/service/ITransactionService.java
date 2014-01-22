@@ -8,7 +8,7 @@ import java.util.NoSuchElementException;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
 
-public interface ITransactionDao {
+public interface ITransactionService {
 
 	Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException;

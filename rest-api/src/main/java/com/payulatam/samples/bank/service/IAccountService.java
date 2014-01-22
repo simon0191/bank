@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
 
 import com.payulatam.samples.bank.common.Account;
 
-public interface IAccountDao {
+public interface IAccountService {
 
 	Account create(String clientId);
 

@@ -3,12 +3,15 @@ package com.payulatam.samples.bank.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.payulatam.samples.bank.common.reports.TransactionReportItem;
 import com.payulatam.samples.bank.common.reports.TransactionReportRequest;
@@ -29,6 +32,12 @@ public class ReportController {
 		return result;
 	}
 	
-	
+	@ExceptionHandler
+    @ResponseBody
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public Exception resolveBindingException ( Exception e )
+    {
+        return e;
+    }
 
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.payulatam.samples.bank.common.Client;
-import com.payulatam.samples.bank.service.IClientDao;
+import com.payulatam.samples.bank.service.IClientService;
 
 @Controller
 @RequestMapping(value = "/clients")
@@ -25,7 +25,7 @@ public class ClientController {
 	 * @Autowired private GigaSpace gigaSpace;
 	 */
 	@Autowired
-	IClientDao clientDAO;
+	IClientService clientDAO;
 
 	@ResponseBody
 	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
