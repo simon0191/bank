@@ -73,6 +73,7 @@ public class AccountDaoTest extends AbstractTestNGSpringContextTests {
 		Account account = new Account();
 		account.setId("id");
 
+		EasyMock.expect(gigaSpace.readById(Account.class, account.getId())).andReturn(account);
 		EasyMock.expect(gigaSpace.takeById(Account.class, account.getId())).andReturn(account);
 		EasyMock.replay(gigaSpace);
 

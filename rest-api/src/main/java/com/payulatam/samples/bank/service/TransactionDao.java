@@ -44,7 +44,6 @@ public class TransactionDao implements ITransactionDao {
 	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {
-		System.out.println("----------- Type: " + type);
 		List<String> invalidArguments = new ArrayList<String>();
 		if (value.compareTo(BigDecimal.ZERO) <= 0) {
 			invalidArguments.add("Transaction value should be >= 0");
@@ -155,9 +154,7 @@ public class TransactionDao implements ITransactionDao {
 		ISpaceQuery<Transaction> query = new SQLQuery<Transaction>(Transaction.class,
 				"transactionDate >= ? AND transactionDate <= ? AND accountId = ?", startDate,
 				endDate, accountId);
-		System.out.println("---------- " + query.toString());
 		Transaction[] result = gigaSpace.readMultiple(query);
-		System.out.println("----------- " + Arrays.asList(result));
 		return Arrays.asList(result);
 	}
 

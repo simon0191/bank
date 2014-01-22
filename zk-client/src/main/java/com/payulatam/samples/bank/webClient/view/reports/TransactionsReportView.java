@@ -69,7 +69,6 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 		} else {
 			String clientId = (String) clientsCombo.getSelectedItem().getAttribute("clientId");
 			List<TransactionReportItem> result = reportService.createReport(clientId,startDate.getValue(),endDate.getValue());
-			System.out.println("----------* "+result);
 			populateResultsGrid(result);
 		}
 	}
