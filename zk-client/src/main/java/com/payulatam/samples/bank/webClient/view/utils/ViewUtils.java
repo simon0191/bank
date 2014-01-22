@@ -35,7 +35,7 @@ public final class ViewUtils {
 		clientListModel.addToSelection(selectedClient);
 		clientsCombo.setModel(clientListModel);
 		if(!clientListModel.isEmpty()) {
-			Events.postEvent("onData",clientsCombo,null);	
+			Events.postEvent(Events.ON_CHANGE,clientsCombo,null);	
 		}
 		
 	}
