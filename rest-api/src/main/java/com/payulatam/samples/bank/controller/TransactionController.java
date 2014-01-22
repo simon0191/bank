@@ -26,20 +26,6 @@ public class TransactionController {
 
 	@Autowired
 	ITransactionDao transactionDao;
-
-//	@ResponseBody
-//	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-//	@ResponseStatus(value = HttpStatus.CREATED)
-//	public Transaction create(@RequestBody Map<String,Object> params) {
-//		Transaction t = new Transaction();
-//		t.setAccountId((String)params.get("accountId"));
-//		t.setType(TransactionType.valueOf((String)params.get("type")));
-//		t.setValue(new BigDecimal((String)params.get("value")));
-//		
-//		Transaction result = transactionDao.create(t.getAccountId(),
-//				t.getType(), t.getValue());
-//		return result;
-//	}
 	
 	@ResponseBody
 	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -71,12 +57,5 @@ public class TransactionController {
     {
         return e;
     }
-	
-//	@ResponseBody
-//	@RequestMapping(value = "/searchByClient/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-//	public List<Transaction> searchByClientId(@PathVariable String id) {
-//		List<Transaction> result = transactionDao.searchByDateBetweenAndAccount(startDate, endDate, accountId);
-//		return result;
-//	}
 
 }

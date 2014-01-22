@@ -14,5 +14,6 @@ public interface IAccountDao {
 	Account searchById(String id);
 
 	List<Account> searchAccountsByClientId(String clientId);
+	
 
 }

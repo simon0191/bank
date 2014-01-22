@@ -9,8 +9,11 @@ import org.openspaces.core.GigaSpace;
 import org.openspaces.core.context.GigaSpaceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.gigaspaces.client.WriteModifiers;
+import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 
 @Service
@@ -22,6 +25,9 @@ public class ClientDao implements IClientDao {
 
 	@Autowired
 	private Utils utils;
+	
+	@Autowired
+	private IAccountDao accountDao;
 
 	/* (non-Javadoc)
 	 * @see com.payulatam.samples.bank.service.IClientDao#create(java.lang.String, java.lang.String, java.lang.String)
@@ -67,11 +73,19 @@ public class ClientDao implements IClientDao {
 	 * @see com.payulatam.samples.bank.service.IClientDao#delete(java.lang.String)
 	 */
 	@Override
+	@Transactional(propagation=Propagation.REQUIRED)
 	public Client delete(String id) {
-		Client result = gigaSpace.takeById(Client.class, id);
+		Client result = gigaSpace.readById(Client.class, id);
 		if (result == null) {
 			throw new NoSuchElementException();
 		}
+		Account template = new Account();
+		template.setClientId(result.getId());
+		Account[] accounts = gigaSpace.readMultiple(template);
+		for(Account a:accounts) {
+			accountDao.delete(a.getId());
+		}
+		result = gigaSpace.takeById(Client.class, id);
 		return result;
 	}
 

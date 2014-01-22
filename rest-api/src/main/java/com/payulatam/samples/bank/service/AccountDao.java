@@ -8,12 +8,15 @@ import java.util.NoSuchElementException;
 import org.openspaces.core.GigaSpace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.gigaspaces.client.WriteModifiers;
 import com.gigaspaces.query.ISpaceQuery;
 import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
+import com.payulatam.samples.bank.common.Transaction;
 
 @Service
 public class AccountDao implements IAccountDao {
@@ -47,11 +50,16 @@ public class AccountDao implements IAccountDao {
 	 * @see com.payulatam.samples.bank.service.IAccountDao#delete(java.lang.String)
 	 */
 	@Override
+	@Transactional(propagation=Propagation.REQUIRED)
 	public Account delete(String id) {
-		Account result = gigaSpace.takeById(Account.class, id);
+		Account result = gigaSpace.readById(Account.class, id);
 		if (result == null) {
-			throw new NoSuchElementException("");
+			throw new NoSuchElementException("Account with Id <"+id+"> does not exist");
 		}
+		Transaction template = new Transaction();
+		template.setAccountId(result.getId());
+		gigaSpace.takeMultiple(template);
+		result = gigaSpace.takeById(Account.class, id);
 		return result;
 	}
 
