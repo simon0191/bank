@@ -1,6 +1,7 @@
 package com.payulatam.samples.bank.webClient.view.accounts;
 
 import java.text.NumberFormat;
+import java.util.Currency;
 import java.util.Locale;
 
 import org.zkoss.zk.ui.Component;
@@ -49,6 +50,7 @@ public class AccountsGridView extends SelectorComposer<Component> {
 				new Label(account.getClientId()).setParent(row);
 
 				NumberFormat usdCostFormat = NumberFormat.getCurrencyInstance(Locale.US);
+				usdCostFormat.setCurrency(Currency.getInstance(Locale.US));
 				usdCostFormat.setMinimumFractionDigits(1);
 				usdCostFormat.setMaximumFractionDigits(2);
 				new Label(usdCostFormat.format(account.getBalance().doubleValue())).setParent(row);
