@@ -11,6 +11,7 @@ import org.zkoss.zul.Comboitem;
 import org.zkoss.zul.ComboitemRenderer;
 
 import com.payulatam.samples.bank.common.Account;
+import com.payulatam.samples.bank.webClient.utils.StringUtils;
 
 public class AccountsComboView extends SelectorComposer<Component> {
 
@@ -28,12 +29,8 @@ public class AccountsComboView extends SelectorComposer<Component> {
 		accountsCombo.setItemRenderer(new ComboitemRenderer<Account>() {
 			@Override
 			public void render(Comboitem item, Account account, int index) throws Exception {
-				NumberFormat usdCostFormat = NumberFormat.getCurrencyInstance(Locale.US);
-				usdCostFormat.setMinimumFractionDigits(1);
-				usdCostFormat.setMaximumFractionDigits(2);
-
 				item.setLabel(account.getId());
-				item.setDescription(usdCostFormat.format(account.getBalance().doubleValue()));
+				item.setDescription(StringUtils.formatMoney(account.getBalance()));
 				item.setAttribute("accountId", account.getId());
 			}
 		});

@@ -1,7 +1,10 @@
 package com.payulatam.samples.bank.webClient.view.reports;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Currency;
 import java.util.List;
+import java.util.Locale;
 
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
@@ -86,9 +89,9 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 			public void render(final Row row, final TransactionReportItem item, final int index)
 					throws Exception {
 				new Label(item.getAccountId()).setParent(row);
-				new Label(item.getBalance().toString()).setParent(row);
-				new Label(item.getDebits().toString()).setParent(row);
-				new Label(item.getCredits().toString()).setParent(row);
+				new Label(StringUtils.formatMoney(item.getBalance())).setParent(row);
+				new Label(StringUtils.formatMoney(item.getDebits())).setParent(row);
+				new Label(StringUtils.formatMoney(item.getCredits())).setParent(row);
 			}
 
 		});
