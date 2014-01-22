@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.payulatam.samples.bank.common.reports.TransactionReportItem;
 import com.payulatam.samples.bank.common.reports.TransactionReportRequest;
-import com.payulatam.samples.bank.service.ReportService;
+import com.payulatam.samples.bank.service.impl.ReportService;
 
 
 @Controller

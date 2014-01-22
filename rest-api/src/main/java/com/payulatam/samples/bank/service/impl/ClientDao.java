@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.service;
+package com.payulatam.samples.bank.service.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,6 +15,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.gigaspaces.client.WriteModifiers;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
+import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.IClientDao;
+import com.payulatam.samples.bank.service.Utils;
 
 @Service
 public class ClientDao implements IClientDao {

@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.service;
+package com.payulatam.samples.bank.service.impl;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -19,6 +19,8 @@ import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.TransactionType;
+import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.ITransactionDao;
 
 @Service
 public class TransactionDao implements ITransactionDao {
@@ -40,7 +42,7 @@ public class TransactionDao implements ITransactionDao {
 	 */
 	// TODO: Agregar manejador de transacciones
 	// http://docs.spring.io/spring/docs/2.0.8/reference/transaction.html
-	@Transactional(propagation=Propagation.MANDATORY)
+	@Transactional(propagation=Propagation.REQUIRED)
 	@Override
 	public Transaction create(String accountId, TransactionType type, BigDecimal value)
 			throws IllegalArgumentException, IllegalStateException, NoSuchElementException {

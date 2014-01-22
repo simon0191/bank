@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.service;
+package com.payulatam.samples.bank.service.impl;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -17,6 +17,8 @@ import com.j_spaces.core.client.SQLQuery;
 import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
+import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.Utils;
 
 @Service
 public class AccountDao implements IAccountDao {

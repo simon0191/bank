@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.service;
+package com.payulatam.samples.bank.service.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,10 +10,13 @@ import org.openspaces.core.GigaSpace;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.payulatam.samples.bank.common.Account;
 import com.payulatam.samples.bank.common.Client;
 import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.reports.TransactionReportItem;
 import com.payulatam.samples.bank.common.reports.TransactionReportRequest;
+import com.payulatam.samples.bank.service.IAccountDao;
+import com.payulatam.samples.bank.service.ITransactionDao;
 
 @Service
 
@@ -21,6 +24,9 @@ public class ReportService {
 	
 	@Autowired
 	private GigaSpace gigaSpace;
+	
+	@Autowired
+	private IAccountDao accountDao;
 	
 	@Autowired
 	private ITransactionDao transactionDao;
@@ -35,7 +41,10 @@ public class ReportService {
 		
 		for(Transaction t:ts) {
 			if(!map.containsKey(t.getAccountId())) {
-				map.put(t.getAccountId(), new TransactionReportItem(t.getAccountId()));
+				TransactionReportItem item = new TransactionReportItem(t.getAccountId());
+				Account account = accountDao.searchById(t.getAccountId());
+				item.setBalance(account.getBalance());
+				map.put(t.getAccountId(), item);
 			}
 			TransactionReportItem curr = map.get(t.getAccountId());
 			switch(t.getType()) {
