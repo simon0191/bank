@@ -6,6 +6,7 @@ import java.util.Currency;
 import java.util.List;
 import java.util.Locale;
 
+import org.springframework.web.client.HttpClientErrorException;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.select.SelectorComposer;
 import org.zkoss.zk.ui.select.annotation.Listen;
@@ -47,13 +48,13 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 	private Grid resultsGrid;
 	@Wire
 	private Grid reportForm;
-	
+
 	@Wire
 	private Datebox startDate;
-	
+
 	@Wire
 	private Datebox endDate;
-	
+
 	@WireVariable
 	private ReportService reportService;
 
@@ -61,7 +62,7 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 	public void doAfterCompose(Component comp) throws Exception {
 		super.doAfterCompose(comp);
 		configResultsGrid();
-		ViewUtils.populateClientsCombo(clientsCombo,clientService.getAllClients());
+		ViewUtils.populateClientsCombo(clientsCombo, clientService.getAllClients());
 	}
 
 	@Listen("onClick = button#createReport")
@@ -71,13 +72,22 @@ public class TransactionsReportView extends SelectorComposer<Component> {
 			Messagebox.show("Datos invalidos");
 		} else {
 			String clientId = (String) clientsCombo.getSelectedItem().getAttribute("clientId");
-			List<TransactionReportItem> result = reportService.createReport(clientId,startDate.getValue(),endDate.getValue());
-			populateResultsGrid(result);
+			try {
+				List<TransactionReportItem> result = reportService.createReport(clientId,
+						startDate.getValue(), endDate.getValue());
+				populateResultsGrid(result);
+			} catch (HttpClientErrorException e) {
+				Messagebox.show("Please verify the information", "Bad Request", Messagebox.OK,
+						Messagebox.ERROR);
+			}
+
 		}
 	}
+
 	private void populateResultsGrid(List<TransactionReportItem> items) {
 		List<TransactionReportItem> itemsList = new ArrayList<TransactionReportItem>(items);
-		ListModelList<TransactionReportItem> reportModel = new ListModelList<TransactionReportItem>(itemsList);
+		ListModelList<TransactionReportItem> reportModel = new ListModelList<TransactionReportItem>(
+				itemsList);
 
 		resultsGrid.setModel(reportModel);
 		resultsGrid.setVisible(true);

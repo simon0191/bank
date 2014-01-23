@@ -14,9 +14,9 @@
     http://www.openspaces.org/schema/core/openspaces-core.xsd
      http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd">
 
+	<context:annotation-config />
 	<context:component-scan base-package="com.payulatam.samples.bank.controller" />
 	<context:component-scan base-package="com.payulatam.samples.bank.service" />
-	<context:component-scan base-package="com.payulatam.samples.bank.service.impl" />
 	<mvc:annotation-driven />
 
 	<!-- Transaction Manager -->

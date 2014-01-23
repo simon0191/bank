@@ -5,6 +5,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
+import org.springframework.web.client.HttpClientErrorException;
 import org.zkoss.zk.ui.Component;
 import org.zkoss.zk.ui.Executions;
 import org.zkoss.zk.ui.select.SelectorComposer;
@@ -89,8 +90,8 @@ public class CreateTransactionView extends SelectorComposer<Component> {
 			try {
 				Transaction t = transactionService.createTransaction(accountId,type,value);
 				Executions.sendRedirect("/transactions/create.zul");
-			} catch(IllegalStateException ise) {
-				Messagebox.show(ise.toString());
+			} catch(HttpClientErrorException e) {
+				Messagebox.show("Please verify the information", "Bad Request", Messagebox.OK, Messagebox.ERROR);
 			}
 			
 		}

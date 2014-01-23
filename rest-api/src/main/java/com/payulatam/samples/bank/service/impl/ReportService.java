@@ -20,7 +20,6 @@ import com.payulatam.samples.bank.service.IReportService;
 import com.payulatam.samples.bank.service.ITransactionService;
 
 @Service
-
 public class ReportService implements IReportService {
 	
 	@Autowired
