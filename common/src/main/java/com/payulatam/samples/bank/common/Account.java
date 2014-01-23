@@ -54,4 +54,57 @@ public class Account {
 	public String toString() {
 		return "Account [id=" + id + ", balance=" + balance + "]";
 	}
+
+	@Override
+	public boolean equals(Object other) {
+		if (other == this) {
+			return true;
+		}
+		if (other instanceof Account) {
+			Account that = (Account) other;
+			return ((this.id == that.id || this.id.equals(that.id))
+					&& (this.clientId == that.clientId || this.clientId.equals(that.clientId)) && (this.balance == that.balance || this.balance
+					.equals(that.id)));
+		} else {
+			return false;
+		}
+	}
+
+	public static Builder builder() {
+		return new Builder();
+	}
+
+	private Account(Builder builder) {
+		this.id = builder.id;
+		this.balance = builder.balance;
+		this.clientId = builder.clientId;
+	}
+
+	public static class Builder {
+		private String id;
+		private String clientId;
+		private BigDecimal balance;
+		private Builder() {
+			
+		}
+		public Builder clientId(String clientId) {
+			this.clientId = clientId;
+			return this;
+		}
+
+		public Builder id(String id) {
+			this.id = id;
+			return this;
+		}
+
+		public Builder balance(BigDecimal balance) {
+			this.balance = balance;
+			return this;
+		}
+
+		public Account build() {
+			return new Account(this);
+		}
+
+	}
 }

@@ -80,4 +80,71 @@ public class Transaction {
 		this.id = id;
 	}
 
+	public static Builder builder() {
+		return new Builder();
+	}
+	
+	public boolean equals(Object other) {
+		if(other == this){
+			return true;
+		}
+		if(other instanceof Transaction) {
+			Transaction that = (Transaction)other;
+			return ((this.accountId==that.accountId || this.accountId.equals(that.accountId)) &&
+					(this.id == that.accountId || this.accountId.equals(that.accountId)) &&
+					(this.transactionDate == that.transactionDate || this.transactionDate.equals(that.transactionDate)) &&
+					(this.type == that.type || this.type.equals(that.type)) &&
+					(this.value == that.value || this.value.equals(that.value))
+					);
+		}
+		else {
+			return false;
+		}
+	}
+	
+	private Transaction(Builder builder) {
+		this.accountId = builder.accountId;
+		this.id	 = builder.id;
+		this.transactionDate = builder.transactionDate;
+		this.type = builder.type;
+		this.value = builder.value;
+	}
+	
+	public static class Builder {
+		private String accountId;
+		private String id;
+		private TransactionType type;
+		private BigDecimal value;
+		private Date transactionDate;
+		
+		private Builder() {
+			
+		}
+		
+		public Builder accountId(String accountId) {
+			this.accountId = accountId;
+			return this;
+		}
+		public Builder id(String id) {
+			this.id = id;
+			return this;
+		}
+		public Builder type(TransactionType type) {
+			this.type = type;
+			return this;
+		}
+		public Builder value(BigDecimal value) {
+			this.value = value;
+			return this;
+		}
+		public Builder transactionDate(Date transactionDate) {
+			this.transactionDate = transactionDate;
+			return this; 
+		}
+		public Transaction build() {
+			return new Transaction(this);
+		}
+		
+	}
+
 }
