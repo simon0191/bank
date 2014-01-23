@@ -74,7 +74,7 @@ public class AccountServiceIntegrationTest extends AbstractTestNGSpringContextTe
 	public void createAccountWithNonExistentClientThrowsException() {
 		accountService.create("nonExistentId");
 	}
-
+	@Test
 	public void createAccountWithNonExistentClientIsNotCreated() {
 		Account account = Account.builder().clientId("nonExistentId").build();
 

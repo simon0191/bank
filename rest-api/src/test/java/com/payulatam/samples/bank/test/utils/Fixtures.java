@@ -22,8 +22,7 @@ public final class Fixtures {
 	}
 
 	public static Account standardAccount(String clientId) {
-		Account result = Account.builder().clientId(clientId).balance(BigDecimal.TEN).build();
-		return result;
+		return standardAccount(clientId,BigDecimal.TEN);
 	}
 
 	public static List<Transaction> validTransactions(String accountId) {
@@ -48,6 +47,10 @@ public final class Fixtures {
 	public static Transaction creditTransaction(String accountId, BigDecimal value, Date date) {
 		return Transaction.builder().accountId(accountId).value(value).transactionDate(date)
 				.type(TransactionType.CREDIT).build();
+	}
+
+	public static Account standardAccount(String clientId, BigDecimal value) {
+		return Account.builder().clientId(clientId).balance(value).build();
 	}
 
 }

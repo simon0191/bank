@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Services">
+	<test name="Utils">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.UtilsTest" />
+		</classes>
+	</test>
 	<test name="Mock">
 		<classes>
 			<class name="com.payulatam.samples.bank.test.service.AccountServiceTest" />
 			<class name="com.payulatam.samples.bank.test.service.ClientServiceTest" />
-			<class name="com.payulatam.samples.bank.test.service.TransactionServiceTest" />
-			<class name="com.payulatam.samples.bank.test.service.UtilsTest" />
+			<class
+				name="com.payulatam.samples.bank.test.service.TransactionServiceTest" />
 		</classes>
 	</test>
 	<test name="Integration">
 		<classes>
-			<class name="com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest" />
-<!-- 			<class name="com.payulatam.samples.bank.test.service.integration.ClientServiceIntegrationTest" /> -->
-<!-- 			<class name="com.payulatam.samples.bank.test.service.integration.TransactionServiceIntegrationTest" /> -->
-<!-- 			<class name="com.payulatam.samples.bank.test.service.integration.UtilsIntegrationTest" /> -->
+			<class
+				name="com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest" />
+			<class
+				name="com.payulatam.samples.bank.test.service.integration.ClientServiceIntegrationTest" />
+			<!-- <class name="com.payulatam.samples.bank.test.service.integration.TransactionServiceIntegrationTest" 
+				/> -->
 		</classes>
 	</test>
 </suite>  	
