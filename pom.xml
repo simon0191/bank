@@ -28,7 +28,8 @@
 		<module>common</module>
 		<module>mirror</module>
 		<module>space</module>
-		<!-- <module>rest-api</module> -->
+		<module>rest-api</module>
+		<module>zk-client</module>
 	</modules>
 	<dependencies>
 		<dependency>

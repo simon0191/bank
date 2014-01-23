@@ -1,48 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="36" passed="36">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Services" duration-ms="582" started-at="2014-01-22T14:54:46Z" finished-at="2014-01-22T14:54:47Z">
+  <suite name="Default suite" duration-ms="2339" started-at="2014-01-23T16:29:04Z" finished-at="2014-01-23T16:29:07Z">
     <groups>
     </groups>
-    <test name="AccountDao" duration-ms="485" started-at="2014-01-22T14:54:46Z" finished-at="2014-01-22T14:54:47Z">
-      <class name="com.payulatam.samples.bank.test.service.AccountDaoTest">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="5" started-at="2014-01-22T09:54:46Z" finished-at="2014-01-22T09:54:46Z">
+    <test name="Default test" duration-ms="2339" started-at="2014-01-23T16:29:04Z" finished-at="2014-01-23T16:29:07Z">
+      <class name="com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="6" started-at="2014-01-23T11:29:04Z" finished-at="2014-01-23T11:29:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="447" started-at="2014-01-22T09:54:46Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="2147" started-at="2014-01-23T11:29:04Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2014-01-23T11:29:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountAssignsId()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="createAccountInvalidClientId()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="createAccountInvalidClientId" duration-ms="8" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="18" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="createAccountAssignsId()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="createAccountAssignsId" duration-ms="35" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountAssignsId -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountAssignsId()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="2" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountCreatesAccountWithBalanceEqual0()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="createAccountCreatesAccountWithBalanceEqual0()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="createAccountCreatesAccountWithBalanceEqual0" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountCreatesAccountWithBalanceEqual0 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountCreatesAccountWithBalanceEqual0()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountCreatesAccountWithItsOwnerId()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="createAccountCreatesAccountWithItsOwnerId()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="createAccountCreatesAccountWithItsOwnerId" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAccountCreatesAccountWithItsOwnerId -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountCreatesAccountWithItsOwnerId()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="createAccountWithNonExistentClientThrowsException()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="createAccountWithNonExistentClientThrowsException" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <exception class="java.util.NoSuchElementException">
             <full-stacktrace>
               <![CDATA[java.util.NoSuchElementException
 	at com.payulatam.samples.bank.service.impl.AccountService.create(AccountService.java:37)
-	at com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId(AccountDaoTest.java:67)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:319)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at com.sun.proxy.$Proxy29.create(Unknown Source)
+	at com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountWithNonExistentClientThrowsException(AccountServiceIntegrationTest.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,64 +154,139 @@
           </exception> <!-- java.util.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createAccountInvalidClientId -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        </test-method> <!-- createAccountWithNonExistentClientThrowsException -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.createAccountInvalidClientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.createValidAccount()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountWithNonExistentClientThrowsException()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="createValidAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="createValidAccount" duration-ms="4" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createValidAccount -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteAccountInvalidId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="deleteAccountDeletesAccountInGigaSpace()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="deleteAccountDeletesAccountInGigaSpace" duration-ms="33" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAccountDeletesAccountInGigaSpace -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.createValidAccount()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.createAccountWithNonExistentClientThrowsException()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="deleteAccountInvalidId()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="deleteAccountInvalidId" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountDeletesAccountInGigaSpace()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountDeletesItsTransactions()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountDeletesAccountInGigaSpace()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="deleteAccountDeletesItsTransactions()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="deleteAccountDeletesItsTransactions" duration-ms="5" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAccountDeletesItsTransactions -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountDeletesItsTransactions()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountReturnsDeletedAccount()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="deleteAccountReturnsDeletedAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="deleteAccountReturnsDeletedAccount" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAccountReturnsDeletedAccount -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteAccountReturnsDeletedAccount()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteNonExistentAccountThrowsException()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="deleteNonExistentAccountThrowsException()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="deleteNonExistentAccountThrowsException" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <exception class="java.util.NoSuchElementException">
             <message>
               <![CDATA[Account with Id <nonExistentId> does not exist]]>
@@ -137,14 +294,25 @@
             <full-stacktrace>
               <![CDATA[java.util.NoSuchElementException: Account with Id <nonExistentId> does not exist
 	at com.payulatam.samples.bank.service.impl.AccountService.delete(AccountService.java:56)
-	at com.payulatam.samples.bank.test.service.AccountDaoTest.deleteAccountInvalidId(AccountDaoTest.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:319)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:183)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:150)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:110)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:172)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:202)
+	at com.sun.proxy.$Proxy29.delete(Unknown Source)
+	at com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteNonExistentAccountThrowsException(AccountServiceIntegrationTest.java:114)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -174,106 +342,83 @@
           </exception> <!-- java.util.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteAccountInvalidId -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        </test-method> <!-- deleteNonExistentAccountThrowsException -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="deleteValidAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="deleteValidAccount" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteValidAccount -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteAccountInvalidId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.deleteNonExistentAccountThrowsException()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="searchAcountById()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="searchAcountById" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="searchAcountByIdReturnsRightAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="searchAcountByIdReturnsRightAccount" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchAcountById -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        </test-method> <!-- searchAcountByIdReturnsRightAccount -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountByIdReturnsRightAccount()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.deleteValidAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountById()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountByNonExistentIdThrowsException()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchAcountByNonExistentId()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="searchAcountByNonExistentId" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountByIdReturnsRightAccount()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="searchAcountByNonExistentIdThrowsException()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="searchAcountByNonExistentIdThrowsException" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <exception class="java.util.NoSuchElementException">
             <full-stacktrace>
               <![CDATA[java.util.NoSuchElementException
 	at com.payulatam.samples.bank.service.impl.AccountService.searchById(AccountService.java:72)
-	at com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId(AccountDaoTest.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:319)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at com.sun.proxy.$Proxy29.searchById(Unknown Source)
+	at com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountByNonExistentIdThrowsException(AccountServiceIntegrationTest.java:148)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -303,76 +448,68 @@
           </exception> <!-- java.util.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchAcountByNonExistentId -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        </test-method> <!-- searchAcountByNonExistentIdThrowsException -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByClientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchAcountsByClientId()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="searchAcountsByClientId" duration-ms="2" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchAcountsByClientId -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountByNonExistentId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountByNonExistentIdThrowsException()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountsByClientIdReturnsRightAccounts()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="searchAcountsByClientIdReturnsRightAccounts()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="searchAcountsByClientIdReturnsRightAccounts" duration-ms="63" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAcountsByClientIdReturnsRightAccounts -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByClientId()]]>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountsByClientIdReturnsRightAccounts()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="searchAcountsByNonExistentClientId()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="searchAcountsByNonExistentClientId" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        <test-method status="PASS" signature="searchAcountsByNonExistentClientIdThrowsException()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="searchAcountsByNonExistentClientIdThrowsException" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <exception class="java.util.NoSuchElementException">
             <full-stacktrace>
               <![CDATA[java.util.NoSuchElementException
 	at com.payulatam.samples.bank.service.impl.AccountService.searchAccountsByClientId(AccountService.java:84)
-	at com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientId(AccountDaoTest.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:319)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:196)
+	at com.sun.proxy.$Proxy29.searchAccountsByClientId(Unknown Source)
+	at com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountsByNonExistentClientIdThrowsException(AccountServiceIntegrationTest.java:178)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:606)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
+	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:158)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -402,1219 +539,42 @@
           </exception> <!-- java.util.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchAcountsByNonExistentClientId -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
+        </test-method> <!-- searchAcountsByNonExistentClientIdThrowsException -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountsByNonExistentClientIdThrowsException()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest.searchAcountsByNonExistentClientIdThrowsException()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="afterClass" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest@3fea4043]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2014-01-23T11:29:07Z" finished-at="2014-01-23T11:29:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.AccountDaoTest@1b3b5c39]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.AccountDaoTest.searchAcountsByNonExistentClientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- com.payulatam.samples.bank.test.service.AccountDaoTest -->
-    </test> <!-- AccountDao -->
-    <test name="ClientDao" duration-ms="16" started-at="2014-01-22T14:54:47Z" finished-at="2014-01-22T14:54:47Z">
-      <class name="com.payulatam.samples.bank.test.service.ClientDaoTest">
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="7" started-at="2014-01-22T09:54:47Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="createValidClient()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="createValidClient" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createValidClient -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="deleteNonExistentClient()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="deleteNonExistentClient" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.ClientService.delete(ClientService.java:80)
-	at com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient(ClientDaoTest.java:78)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteNonExistentClient -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.createValidClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.deleteNonExistentClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchById()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="searchById" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchById -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchById()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByNonExistentId()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="searchByNonExistentId" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.ClientService.searchById(ClientService.java:99)
-	at com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId(ClientDaoTest.java:102)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByNonExistentId -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.searchByNonExistentId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="updateNonExistingClient()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="updateNonExistingClient" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.ClientService.update(ClientService.java:56)
-	at com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient(ClientDaoTest.java:67)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- updateNonExistingClient -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.ClientDaoTest.updateNonExistingClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.ClientDaoTest@5678d71]" name="springTestContextAfterTestClass" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- com.payulatam.samples.bank.test.service.ClientDaoTest -->
-    </test> <!-- ClientDao -->
-    <test name="TransactionDao" duration-ms="40" started-at="2014-01-22T14:54:47Z" finished-at="2014-01-22T14:54:47Z">
-      <class name="com.payulatam.samples.bank.test.service.TransactionDaoTest">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="8" started-at="2014-01-22T09:54:47Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="createCreditTransaction()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="createCreditTransaction" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createCreditTransaction -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createCreditTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createCreditTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createDebitTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="createDebitTransaction()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="createDebitTransaction" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createDebitTransaction -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createDebitTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidCreditTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="createInvalidCreditTransaction()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="createInvalidCreditTransaction" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.lang.IllegalStateException">
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalStateException
-	at com.payulatam.samples.bank.service.impl.TransactionService.create(TransactionService.java:65)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidCreditTransaction(TransactionDaoTest.java:107)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalStateException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createInvalidCreditTransaction -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidCreditTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNegativeValueTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="createInvalidNegativeValueTransaction()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="createInvalidNegativeValueTransaction" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[[Transaction value should be >= 0]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: [Transaction value should be >= 0]
-	at com.payulatam.samples.bank.service.impl.TransactionService.create(TransactionService.java:57)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNegativeValueTransaction(TransactionDaoTest.java:123)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createInvalidNegativeValueTransaction -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNegativeValueTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNullTypeTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="createInvalidNullTypeTransaction()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="createInvalidNullTypeTransaction" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[[Transaction type can not be null]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: [Transaction type can not be null]
-	at com.payulatam.samples.bank.service.impl.TransactionService.create(TransactionService.java:57)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNullTypeTransaction(TransactionDaoTest.java:138)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createInvalidNullTypeTransaction -->
-        <test-method status="PASS" signature="searchByAccountId()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByAccountId" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByAccountId -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByAccountId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.createInvalidNullTypeTransaction()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByAccountId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByClientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchByClientId()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByClientId" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByClientId -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByDateBetweenAndAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByDateBetweenAndAccount" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByDateBetweenAndAccount -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByClientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByDateBetweenAndClient()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByDateBetweenAndClient" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByDateBetweenAndClient -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByDateBetweenAndNonExistentAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByDateBetweenAndNonExistentAccount" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <message>
-              <![CDATA[Non existent account]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException: Non existent account
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByDateBetweenAndAccount(TransactionService.java:151)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndNonExistentAccount(TransactionDaoTest.java:279)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByDateBetweenAndNonExistentAccount -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndNonExistentAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByDateBetweenAndNonExistentAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="searchByIllegalDateRangeAndAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByIllegalDateRangeAndAccount" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[startDate should be before endDate]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: startDate should be before endDate
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByDateBetweenAndAccount(TransactionService.java:154)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndAccount(TransactionDaoTest.java:296)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByIllegalDateRangeAndAccount -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchByIllegalDateRangeAndClient()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByIllegalDateRangeAndClient" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[startDate should be before endDate]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: startDate should be before endDate
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByDateBetweenAndAccount(TransactionService.java:154)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndClient(TransactionDaoTest.java:368)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByIllegalDateRangeAndClient -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByIllegalDateRangeAndClient()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentAccountId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByNonExistentAccountId()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByNonExistentAccountId" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByAccountId(TransactionService.java:114)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentAccountId(TransactionDaoTest.java:197)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByNonExistentAccountId -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentAccountId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchByNonExistentCientId()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByNonExistentCientId" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.AccountService.searchAccountsByClientId(AccountService.java:84)
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByClientId(TransactionService.java:131)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentCientId(TransactionDaoTest.java:241)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByNonExistentCientId -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentCientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentCientId()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchByNonExistentNumber()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByNonExistentNumber" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <exception class="java.util.NoSuchElementException">
-            <full-stacktrace>
-              <![CDATA[java.util.NoSuchElementException
-	at com.payulatam.samples.bank.service.impl.TransactionService.searchByNumber(TransactionService.java:98)
-	at com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentNumber(TransactionDaoTest.java:165)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:200)
-	at org.springframework.test.context.testng.AbstractTestNGSpringContextTests.run(AbstractTestNGSpringContextTests.java:155)
-	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:212)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.util.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByNonExistentNumber -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNonExistentNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="searchByNumber()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchByNumber" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchByNumber -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchByNumber()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="searchBySameDateRangeAndAccount()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="searchBySameDateRangeAndAccount" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchBySameDateRangeAndAccount -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchBySameDateRangeAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestClass -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.payulatam.samples.bank.test.service.TransactionDaoTest@3a3c7186]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.payulatam.samples.bank.test.service.TransactionDaoTest.searchBySameDateRangeAndAccount()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-      </class> <!-- com.payulatam.samples.bank.test.service.TransactionDaoTest -->
-    </test> <!-- TransactionDao -->
-    <test name="Utils" duration-ms="5" started-at="2014-01-22T14:54:47Z" finished-at="2014-01-22T14:54:47Z">
-      <class name="com.payulatam.samples.bank.test.service.UtilsTest">
-        <test-method status="PASS" signature="createValidateEmptyName()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="createValidateEmptyName" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createValidateEmptyName -->
-        <test-method status="PASS" signature="createValidateNameWithOutSpaces()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="createValidateNameWithOutSpaces" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createValidateNameWithOutSpaces -->
-        <test-method status="PASS" signature="validateEmptyPhoneNumber()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="validateEmptyPhoneNumber" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateEmptyPhoneNumber -->
-        <test-method status="PASS" signature="createValidateNameWithSpaces()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="createValidateNameWithSpaces" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createValidateNameWithSpaces -->
-        <test-method status="PASS" signature="validateInvalidPhoneNumber()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="validateInvalidPhoneNumber" duration-ms="1" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateInvalidPhoneNumber -->
-        <test-method status="PASS" signature="validatePhoneNumberWithSpaces()[pri:0, instance:com.payulatam.samples.bank.test.service.UtilsTest@303b0e3f]" name="validatePhoneNumberWithSpaces" duration-ms="0" started-at="2014-01-22T09:54:47Z" finished-at="2014-01-22T09:54:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePhoneNumberWithSpaces -->
-      </class> <!-- com.payulatam.samples.bank.test.service.UtilsTest -->
-    </test> <!-- Utils -->
-  </suite> <!-- Services -->
+      </class> <!-- com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

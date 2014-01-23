@@ -12,7 +12,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,7 +23,7 @@ import com.payulatam.samples.bank.service.IAccountService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
-public class AccountDaoTest extends AbstractTestNGSpringContextTests {
+public class AccountServiceTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
 	private IAccountService accountService;

@@ -21,9 +21,14 @@
 
 	<!-- Transaction Manager -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
+
 	<!-- Remote GigaSpace -->
-	<os-core:space id="space"
-		url="jini://*/*/space?locators=192.168.4.160:7102" />
+
+	<bean id="propertiesConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
+	<os-core:space id="space" url="/./processorSpace"
+		lookup-groups="processor-integration-tests" />
+	<os-core:giga-space id="gigaSpace" space="space" />
 	<os-core:distributed-tx-manager id="transactionManager" />
 	<os-core:giga-space id="gigaSpace" space="space"
 		tx-manager="transactionManager" />

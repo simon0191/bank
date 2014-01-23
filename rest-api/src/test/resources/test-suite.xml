@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Services">
+	<test name="AccountDao">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.AccountServiceTest" />
+		</classes>
+	</test>
+	<test name="ClientDao">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.ClientServiceTest" />
+		</classes>
+	</test>
+	<test name="TransactionDao">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.TransactionServiceTest" />
+		</classes>
+	</test>
+	<test name="Utils">
+		<classes>
+			<class name="com.payulatam.samples.bank.test.service.UtilsTest" />
+		</classes>
+	</test>
+</suite>  	

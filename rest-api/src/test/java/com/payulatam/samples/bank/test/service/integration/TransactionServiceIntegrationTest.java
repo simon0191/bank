@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.test.service;
+package com.payulatam.samples.bank.test.service.integration;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -29,7 +29,7 @@ import com.payulatam.samples.bank.service.ITransactionService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
-public class TransactionServiceTest extends AbstractTestNGSpringContextTests {
+public class TransactionServiceIntegrationTest extends AbstractTestNGSpringContextTests {
 	@Autowired
 	private ITransactionService transactionService;
 

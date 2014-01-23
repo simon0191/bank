@@ -36,7 +36,4 @@ public class AccountsComboView extends SelectorComposer<Component> {
 			}
 		});
 	}
-	
-	
-
 }

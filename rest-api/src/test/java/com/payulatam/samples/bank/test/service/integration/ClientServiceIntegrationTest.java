@@ -1,4 +1,4 @@
-package com.payulatam.samples.bank.test.service;
+package com.payulatam.samples.bank.test.service.integration;
 
 import java.util.NoSuchElementException;
 
@@ -20,7 +20,7 @@ import com.payulatam.samples.bank.service.IClientService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "/applicationContext-test.xml")
-public class ClientServiceTest extends AbstractTestNGSpringContextTests {
+public class ClientServiceIntegrationTest extends AbstractTestNGSpringContextTests {
 
 	@Autowired
 	private IClientService clientDAO;

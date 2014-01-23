@@ -16,11 +16,12 @@ import com.payulatam.samples.bank.common.Transaction;
 import com.payulatam.samples.bank.common.reports.TransactionReportItem;
 import com.payulatam.samples.bank.common.reports.TransactionReportRequest;
 import com.payulatam.samples.bank.service.IAccountService;
+import com.payulatam.samples.bank.service.IReportService;
 import com.payulatam.samples.bank.service.ITransactionService;
 
 @Service
 
-public class ReportService {
+public class ReportService implements IReportService {
 	
 	@Autowired
 	private GigaSpace gigaSpace;
@@ -31,6 +32,10 @@ public class ReportService {
 	@Autowired
 	private ITransactionService transactionService;
 
+	/* (non-Javadoc)
+	 * @see com.payulatam.samples.bank.service.impl.IReportService#generateReport(com.payulatam.samples.bank.common.reports.TransactionReportRequest)
+	 */
+	@Override
 	public List<TransactionReportItem> generateReport(TransactionReportRequest request) {
 		Client client = gigaSpace.readById(Client.class,request.getClientId());
 		if(client == null) {

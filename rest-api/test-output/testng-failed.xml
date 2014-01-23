@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Services]">
-  <test name="AccountDao(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.payulatam.samples.bank.test.service.ClientDaoTest">
-        <methods>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.ClientDaoTest -->
-      <class name="com.payulatam.samples.bank.test.service.UtilsTest">
-        <methods>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.UtilsTest -->
-      <class name="com.payulatam.samples.bank.test.service.AccountDaoTest">
-        <methods>
-          <include name="springTestContextAfterTestClass"/>
-          <include name="springTestContextBeforeTestClass"/>
-          <include name="deleteValidAccount"/>
-          <include name="springTestContextBeforeTestMethod"/>
-          <include name="springTestContextPrepareTestInstance"/>
-          <include name="springTestContextAfterTestMethod"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.AccountDaoTest -->
-      <class name="com.payulatam.samples.bank.test.service.TransactionDaoTest">
+      <class name="com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest">
         <methods>
           <include name="springTestContextAfterTestClass"/>
           <include name="springTestContextBeforeTestClass"/>
@@ -37,8 +11,10 @@
           <include name="beforeMethod"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestMethod"/>
+          <include name="afterClass"/>
+          <include name="deleteAccountDeletesItsTransactions"/>
         </methods>
-      </class> <!-- com.payulatam.samples.bank.test.service.TransactionDaoTest -->
+      </class> <!-- com.payulatam.samples.bank.test.service.integration.AccountServiceIntegrationTest -->
     </classes>
-  </test> <!-- AccountDao(failed) -->
-</suite> <!-- Failed suite [Services] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
